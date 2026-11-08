@@ -764,9 +764,11 @@ h2 {
 
 .button-light {
   position: relative;
-  min-height: 47px;
+  min-height: 54px;
+  padding-inline: 24px;
   background: var(--lime);
   color: #101827;
+  font-size: 15px;
 }
 
 .button-light:hover {
@@ -783,7 +785,7 @@ h2 {
   margin: 0 auto;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .footer-brand {
@@ -808,9 +810,17 @@ h2 {
   margin: 0;
 }
 
+.site-footer > a:not(.brand) {
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
 .social-links {
   display: flex;
-  gap: 14px;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .social-links a:hover {
@@ -1067,7 +1077,22 @@ h2 {
 
   .social-links {
     flex-direction: column;
-    gap: 7px;
+    gap: 10px;
+  }
+
+  .site-footer > a:not(.brand),
+  .social-links {
+    font-size: 12px;
+  }
+
+  .site-footer > a:not(.brand) {
+    max-width: 100%;
+  }
+
+  .button-light {
+    min-height: 52px;
+    padding-inline: 17px;
+    font-size: 13px;
   }
 
   .site-footer p {
