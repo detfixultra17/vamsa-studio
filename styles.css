@@ -818,9 +818,9 @@ h2 {
 
 .social-links {
   display: flex;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 600;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .social-links a:hover {
@@ -1080,9 +1080,12 @@ h2 {
     gap: 10px;
   }
 
-  .site-footer > a:not(.brand),
-  .social-links {
+  .site-footer > a:not(.brand) {
     font-size: 12px;
+  }
+
+  .social-links {
+    font-size: 15px;
   }
 
   .site-footer > a:not(.brand) {
