@@ -6,9 +6,10 @@
     <meta
       name="description"
       content="VAMSA Studio helps creators and businesses turn their knowledge into digital products that sell — from idea to launch."
+      data-i18n-content="metaDescription"
     >
     <meta name="theme-color" content="#111715">
-    <title>VAMSA Studio — From Idea to Launch</title>
+    <title data-i18n="pageTitle">VAMSA Studio — From Idea to Launch</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,63 +18,76 @@
         <span class="brand-mark" aria-hidden="true">V</span>
         <span class="brand-name">VAMSA <span>STUDIO</span></span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
-        <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+      <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#team" data-i18n="navTeam">Team</a>
+        <a class="nav-cta" href="#contact"><span data-i18n="navContact">Let's talk</span><span aria-hidden="true">↗</span></a>
       </nav>
+      <label class="language-switch">
+        <span class="sr-only" data-i18n="languageSelector">Language</span>
+        <select aria-label="Choose language" data-i18n-aria-label="languageSelector">
+          <option value="en">English</option>
+          <option value="sr">Srpski</option>
+          <option value="es">Español</option>
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+          <option value="hi">हिन्दी</option>
+          <option value="it">Italiano</option>
+        </select>
+      </label>
     </header>
 
     <main>
       <section class="hero section-wrap" id="home">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> STRATEGY · CONTENT · GROWTH</p>
-          <h1>Your knowledge.<br><span>A product that</span><br><span>sells.</span></h1>
-          <p class="hero-intro">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="heroEyebrow">STRATEGY · CONTENT · GROWTH</span></p>
+          <h1 data-i18n-html="heroTitle">Your knowledge.<br><span>A product that</span><br><span>sells.</span></h1>
+          <p class="hero-intro" data-i18n="heroIntro">
             We help creators and anyone who needs digital products, websites, or
             apps — from planning to delivery.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app">
-              Tell us what you need <span aria-hidden="true">↗</span>
+            <a class="button button-primary" href="mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app" data-i18n-href="heroCtaHref">
+              <span data-i18n="heroCta">Tell us what you need</span><span aria-hidden="true">↗</span>
             </a>
-            <a class="text-link" href="#services">Explore our services <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#services"><span data-i18n="exploreServices">Explore our services</span><span aria-hidden="true">↓</span></a>
           </div>
-          <p class="hero-note">For creators with an audience and businesses ready for the next step.</p>
+          <p class="hero-note" data-i18n="heroNote">For creators with an audience and businesses ready for the next step.</p>
         </div>
         <div class="hero-image">
           <img
             src="vamsa-studio-hero.png"
             alt="VAMSA Studio — modern creative studio with a gold logo"
+            data-i18n-alt="heroImageAlt"
             fetchpriority="high"
           >
           <div class="image-caption">
             <span class="caption-icon" aria-hidden="true">✳</span>
-            <span><strong>From idea to launch</strong><br>One team. The whole process.</span>
+            <span><strong data-i18n="imageCaptionTitle">From idea to launch</strong><br><span data-i18n="imageCaptionText">One team. The whole process.</span></span>
           </div>
           <span class="image-index" aria-hidden="true">01 / 04</span>
         </div>
       </section>
 
-      <div class="ticker" aria-label="Our approach">
+      <div class="ticker" aria-label="Our approach" data-i18n-aria-label="tickerLabel">
         <div class="ticker-inner">
-          <span>Digital products</span><i aria-hidden="true">✳</i>
-          <span>Sales copy</span><i aria-hidden="true">✳</i>
-          <span>Websites and apps</span><i aria-hidden="true">✳</i>
-          <span>Launch and growth</span><i aria-hidden="true">✳</i>
-          <span aria-hidden="true">Digital products</span><i aria-hidden="true">✳</i>
-          <span aria-hidden="true">Sales copy</span><i aria-hidden="true">✳</i>
+          <span data-i18n="tickerProducts">Digital products</span><i aria-hidden="true">✳</i>
+          <span data-i18n="tickerCopy">Sales copy</span><i aria-hidden="true">✳</i>
+          <span data-i18n="tickerWebsites">Websites and apps</span><i aria-hidden="true">✳</i>
+          <span data-i18n="tickerGrowth">Launch and growth</span><i aria-hidden="true">✳</i>
+          <span aria-hidden="true" data-i18n="tickerProducts">Digital products</span><i aria-hidden="true">✳</i>
+          <span aria-hidden="true" data-i18n="tickerCopy">Sales copy</span><i aria-hidden="true">✳</i>
         </div>
       </div>
 
       <section class="section-wrap services section-space" id="services">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">WHAT WE DO</p>
-            <h2>From valuable knowledge<br>to <span>an exceptional product.</span></h2>
+            <p class="eyebrow" data-i18n="servicesEyebrow">WHAT WE DO</p>
+            <h2 data-i18n-html="servicesTitle">From valuable knowledge<br>to <span>an exceptional product.</span></h2>
           </div>
-          <p class="section-summary">
+          <p class="section-summary" data-i18n="servicesSummary">
             From digital products to websites and apps — we work with you to find the right solution.
           </p>
         </div>
@@ -81,38 +95,38 @@
           <article class="service-card">
             <span class="service-number">01</span>
             <span class="service-icon" aria-hidden="true">✳</span>
-            <h3>Digital products</h3>
-            <p>eBooks, video courses, or coaching programs — from structure to finished content.</p>
+            <h3 data-i18n="serviceProductsTitle">Digital products</h3>
+            <p data-i18n="serviceProductsText">eBooks, video courses, or coaching programs — from structure to finished content.</p>
           </article>
           <article class="service-card">
             <span class="service-number">02</span>
             <span class="service-icon" aria-hidden="true">↗</span>
-            <h3>Sales copy</h3>
-            <p>Sales pages, VSL scripts, emails, and materials that lead to a purchase.</p>
+            <h3 data-i18n="serviceCopyTitle">Sales copy</h3>
+            <p data-i18n="serviceCopyText">Sales pages, VSL scripts, emails, and materials that lead to a purchase.</p>
           </article>
           <article class="service-card">
             <span class="service-number">03</span>
             <span class="service-icon" aria-hidden="true">◎</span>
-            <h3>Monetization strategy</h3>
-            <p>We analyze your audience and find ways to monetize what you already know.</p>
+            <h3 data-i18n="serviceStrategyTitle">Monetization strategy</h3>
+            <p data-i18n="serviceStrategyText">We analyze your audience and find ways to monetize what you already know.</p>
           </article>
           <article class="service-card">
             <span class="service-number">04</span>
             <span class="service-icon" aria-hidden="true">⌁</span>
-            <h3>Websites and apps</h3>
-            <p>Digital experiences designed to showcase your offer and support your growth.</p>
+            <h3 data-i18n="serviceWebTitle">Websites and apps</h3>
+            <p data-i18n="serviceWebText">Digital experiences designed to showcase your offer and support your growth.</p>
           </article>
           <article class="service-card">
             <span class="service-number">05</span>
             <span class="service-icon" aria-hidden="true">◉</span>
-            <h3>Setup and launch</h3>
-            <p>We get your product ready to sell and guide your launch — from webinar to pilot.</p>
+            <h3 data-i18n="serviceLaunchTitle">Setup and launch</h3>
+            <p data-i18n="serviceLaunchText">We get your product ready to sell and guide your launch — from webinar to pilot.</p>
           </article>
           <article class="service-card service-card-highlight">
             <span class="service-number">06</span>
             <span class="service-icon" aria-hidden="true">↔</span>
-            <h3>Growth partnership</h3>
-            <p>We take the lead on strategy and execution, with an agreed share of sales revenue.</p>
+            <h3 data-i18n="servicePartnershipTitle">Growth partnership</h3>
+            <p data-i18n="servicePartnershipText">We take the lead on strategy and execution, with an agreed share of sales revenue.</p>
           </article>
         </div>
       </section>
@@ -120,22 +134,22 @@
       <section class="audience-band">
         <div class="section-wrap audience-content">
           <div>
-            <p class="eyebrow">WHO WE WORK WITH</p>
-            <h2>You have a need.<br><span>Let's find a solution.</span></h2>
+            <p class="eyebrow" data-i18n="audienceEyebrow">WHO WE WORK WITH</p>
+            <h2 data-i18n-html="audienceTitle">You have a need.<br><span>Let's find a solution.</span></h2>
           </div>
           <div class="audience-list">
             <article>
               <span class="audience-symbol" aria-hidden="true">01</span>
               <div>
-                <h3>Creators</h3>
-                <p>You already have an audience, but need the time or expertise to create and sell your product.</p>
+                <h3 data-i18n="audienceCreatorsTitle">Creators</h3>
+                <p data-i18n="audienceCreatorsText">You already have an audience, but need the time or expertise to create and sell your product.</p>
               </div>
             </article>
             <article>
               <span class="audience-symbol" aria-hidden="true">02</span>
               <div>
-                <h3>Anyone who needs a digital solution</h3>
-                <p>Need a digital product, website, or app? We help you shape the idea and bring it to life.</p>
+                <h3 data-i18n="audienceDigitalTitle">Anyone who needs a digital solution</h3>
+                <p data-i18n="audienceDigitalText">Need a digital product, website, or app? We help you shape the idea and bring it to life.</p>
               </div>
             </article>
           </div>
@@ -144,17 +158,17 @@
 
       <section class="section-wrap about section-space" id="about">
         <div class="about-label">
-          <p class="eyebrow">MEET VAMSA STUDIO</p>
+          <p class="eyebrow" data-i18n="aboutEyebrow">MEET VAMSA STUDIO</p>
           <span class="about-stamp" aria-hidden="true">V<br><small>S</small></span>
         </div>
         <div class="about-copy">
-          <h2>Knowledge, care, and <span>a professional approach.</span></h2>
-          <p>
+          <h2 data-i18n-html="aboutTitle">Knowledge, care, and <span>a professional approach.</span></h2>
+          <p data-i18n="aboutTextOne">
             VAMSA Studio brings strategy, creativity, and execution together to build
             digital solutions tailored to your goals. We completed Monetise, a professional
             program in digital products and growth operations.
           </p>
-          <p>
+          <p data-i18n="aboutTextTwo">
             We approach every project professionally — with clear communication, thoughtful
             planning, and a commitment to delivery. From strategy to launch, we work
             alongside you and adapt the process to your needs.
@@ -162,22 +176,23 @@
           <div class="certificate-card">
             <div class="certificate-heading">
               <div>
-                <p class="eyebrow">COMPLETED TRAINING</p>
+                <p class="eyebrow" data-i18n="certificateEyebrow">COMPLETED TRAINING</p>
                 <h3>Monetise</h3>
               </div>
               <a class="text-link" href="monetise-certificate.pdf" target="_blank" rel="noopener noreferrer">
-                View certificate <span aria-hidden="true">↗</span>
+                <span data-i18n="certificateLink">View certificate</span><span aria-hidden="true">↗</span>
               </a>
             </div>
             <iframe
               class="certificate-preview"
               src="monetise-certificate.pdf"
               title="Original Monetise certificate, shown unaltered"
+              data-i18n-title="certificateTitle"
               loading="lazy"
             ></iframe>
-            <p class="certificate-note">The original certificate is shown unaltered.</p>
+            <p class="certificate-note" data-i18n="certificateNote">The original certificate is shown unaltered.</p>
           </div>
-          <a class="text-link" href="#contact">Let's meet <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#contact"><span data-i18n="aboutLink">Let's meet</span><span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
@@ -185,10 +200,10 @@
         <div class="section-wrap section-space">
           <div class="section-heading team-heading">
             <div>
-              <p class="eyebrow">THE PEOPLE BEHIND THE PROCESS</p>
-              <h2>Small team.<br><span>Big ideas.</span></h2>
+              <p class="eyebrow" data-i18n="teamEyebrow">THE PEOPLE BEHIND THE PROCESS</p>
+              <h2 data-i18n-html="teamTitle">Small team.<br><span>Big ideas.</span></h2>
             </div>
-            <p class="section-summary">Four minds, diverse talents, and a shared focus on what really works.</p>
+            <p class="section-summary" data-i18n="teamSummary">Four minds, diverse talents, and a shared focus on what really works.</p>
           </div>
           <div class="team-grid">
             <article class="team-card">
@@ -217,29 +232,525 @@
 
       <section class="contact-section section-wrap" id="contact">
         <div class="contact-orb" aria-hidden="true"></div>
-        <p class="eyebrow">YOUR NEXT STEP</p>
-        <h2>What do you<br><span>need?</span></h2>
-        <p class="contact-copy">
+        <p class="eyebrow" data-i18n="contactEyebrow">YOUR NEXT STEP</p>
+        <h2 data-i18n-html="contactTitle">What do you<br><span>need?</span></h2>
+        <p class="contact-copy" data-i18n="contactText">
           Tell us what you need — a digital product, website, app, or help with your launch. If you're not sure how to grow your audience and unlock its potential, just get in touch. We'll be honest about how we can help.
         </p>
-        <a class="button button-light" href="mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea">
+        <a class="button button-light" href="mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea" data-i18n-href="contactCtaHref">
           vamsastudioteam@gmail.com <span aria-hidden="true">↗</span>
         </a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="#home" aria-label="VAMSA Studio — back to top">
+      <a class="brand footer-brand" href="#home" aria-label="VAMSA Studio — back to top" data-i18n-aria-label="footerHome">
         <span class="brand-mark" aria-hidden="true">V</span>
         <span class="brand-name">VAMSA <span>STUDIO</span></span>
       </a>
-      <p>Ideas into products.</p>
+      <p data-i18n="footerTagline">Ideas into products.</p>
       <a href="mailto:vamsastudioteam@gmail.com">vamsastudioteam@gmail.com</a>
-      <div class="social-links" aria-label="Follow VAMSA Studio">
+      <div class="social-links" aria-label="Follow VAMSA Studio" data-i18n-aria-label="socialLinks">
         <a href="https://www.instagram.com/vamsa_studio/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
         <a href="https://www.tiktok.com/@vamsastudio" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a>
       </div>
       <span class="copyright">© 2026 VAMSA Studio</span>
     </footer>
+    <script>
+      const translations = {
+        en: {
+          metaDescription: "VAMSA Studio helps creators and businesses turn their knowledge into digital products that sell — from idea to launch.",
+          pageTitle: "VAMSA Studio — From Idea to Launch",
+          mainNavigation: "Main navigation",
+          navServices: "Services",
+          navAbout: "About",
+          navTeam: "Team",
+          navContact: "Let's talk",
+          languageSelector: "Choose language",
+          heroEyebrow: "STRATEGY · CONTENT · GROWTH",
+          heroTitle: "Your knowledge.<br><span>A product that</span><br><span>sells.</span>",
+          heroIntro: "We help creators and anyone who needs digital products, websites, or apps — from planning to delivery.",
+          heroCta: "Tell us what you need",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app",
+          exploreServices: "Explore our services",
+          heroNote: "For creators with an audience and businesses ready for the next step.",
+          heroImageAlt: "VAMSA Studio — modern creative studio with a gold logo",
+          imageCaptionTitle: "From idea to launch",
+          imageCaptionText: "One team. The whole process.",
+          tickerLabel: "Our approach",
+          tickerProducts: "Digital products",
+          tickerCopy: "Sales copy",
+          tickerWebsites: "Websites and apps",
+          tickerGrowth: "Launch and growth",
+          servicesEyebrow: "WHAT WE DO",
+          servicesTitle: "From valuable knowledge<br>to <span>an exceptional product.</span>",
+          servicesSummary: "From digital products to websites and apps — we work with you to find the right solution.",
+          serviceProductsTitle: "Digital products",
+          serviceProductsText: "eBooks, video courses, or coaching programs — from structure to finished content.",
+          serviceCopyTitle: "Sales copy",
+          serviceCopyText: "Sales pages, VSL scripts, emails, and materials that lead to a purchase.",
+          serviceStrategyTitle: "Monetization strategy",
+          serviceStrategyText: "We analyze your audience and find ways to monetize what you already know.",
+          serviceWebTitle: "Websites and apps",
+          serviceWebText: "Digital experiences designed to showcase your offer and support your growth.",
+          serviceLaunchTitle: "Setup and launch",
+          serviceLaunchText: "We get your product ready to sell and guide your launch — from webinar to pilot.",
+          servicePartnershipTitle: "Growth partnership",
+          servicePartnershipText: "We take the lead on strategy and execution, with an agreed share of sales revenue.",
+          audienceEyebrow: "WHO WE WORK WITH",
+          audienceTitle: "You have a need.<br><span>Let's find a solution.</span>",
+          audienceCreatorsTitle: "Creators",
+          audienceCreatorsText: "You already have an audience, but need the time or expertise to create and sell your product.",
+          audienceDigitalTitle: "Anyone who needs a digital solution",
+          audienceDigitalText: "Need a digital product, website, or app? We help you shape the idea and bring it to life.",
+          aboutEyebrow: "MEET VAMSA STUDIO",
+          aboutTitle: "Knowledge, care, and <span>a professional approach.</span>",
+          aboutTextOne: "VAMSA Studio brings strategy, creativity, and execution together to build digital solutions tailored to your goals. We completed Monetise, a professional program in digital products and growth operations.",
+          aboutTextTwo: "We approach every project professionally — with clear communication, thoughtful planning, and a commitment to delivery. From strategy to launch, we work alongside you and adapt the process to your needs.",
+          certificateEyebrow: "COMPLETED TRAINING",
+          certificateLink: "View certificate",
+          certificateTitle: "Original Monetise certificate, shown unaltered",
+          certificateNote: "The original certificate is shown unaltered.",
+          aboutLink: "Let's meet",
+          teamEyebrow: "THE PEOPLE BEHIND THE PROCESS",
+          teamTitle: "Small team.<br><span>Big ideas.</span>",
+          teamSummary: "Four minds, diverse talents, and a shared focus on what really works.",
+          contactEyebrow: "YOUR NEXT STEP",
+          contactTitle: "What do you<br><span>need?</span>",
+          contactText: "Tell us what you need — a digital product, website, app, or help with your launch. If you're not sure how to grow your audience and unlock its potential, just get in touch. We'll be honest about how we can help.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea",
+          footerHome: "VAMSA Studio — back to top",
+          footerTagline: "Ideas into products.",
+          socialLinks: "Follow VAMSA Studio"
+        },
+        sr: {
+          metaDescription: "VAMSA Studio pomaže kreatorima i preduzećima da svoje znanje pretvore u digitalne proizvode koji se prodaju — od ideje do lansiranja.",
+          pageTitle: "VAMSA Studio — Od ideje do lansiranja",
+          mainNavigation: "Glavna navigacija",
+          navServices: "Usluge",
+          navAbout: "O nama",
+          navTeam: "Tim",
+          navContact: "Hajde da pričamo",
+          languageSelector: "Izaberite jezik",
+          heroEyebrow: "STRATEGIJA · SADRŽAJ · RAST",
+          heroTitle: "Tvoje znanje.<br><span>Proizvod koji</span><br><span>se prodaje.</span>",
+          heroIntro: "Pomažemo kreatorima i svima kojima su potrebni digitalni proizvodi, sajtovi ili aplikacije — od planiranja do realizacije.",
+          heroCta: "Reci nam šta ti treba",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Potreban%20mi%20je%20digitalni%20proizvod%2C%20sajt%20ili%20aplikacija",
+          exploreServices: "Istraži naše usluge",
+          heroNote: "Za kreatore sa publikom i preduzeća spremna za sledeći korak.",
+          heroImageAlt: "VAMSA Studio — moderan kreativni studio sa zlatnim logotipom",
+          imageCaptionTitle: "Od ideje do lansiranja",
+          imageCaptionText: "Jedan tim. Ceo proces.",
+          tickerLabel: "Naš pristup",
+          tickerProducts: "Digitalni proizvodi",
+          tickerCopy: "Prodajni tekstovi",
+          tickerWebsites: "Sajtovi i aplikacije",
+          tickerGrowth: "Lansiranje i rast",
+          servicesEyebrow: "ČIME SE BAVIMO",
+          servicesTitle: "Od vrednog znanja<br>do <span>izuzetnog proizvoda.</span>",
+          servicesSummary: "Od digitalnih proizvoda do sajtova i aplikacija — zajedno pronalazimo pravo rešenje za tebe.",
+          serviceProductsTitle: "Digitalni proizvodi",
+          serviceProductsText: "e-knjige, video-kursevi ili coaching programi — od strukture do gotovog sadržaja.",
+          serviceCopyTitle: "Prodajni tekstovi",
+          serviceCopyText: "Prodajne stranice, VSL skripte, imejlovi i materijali koji vode do kupovine.",
+          serviceStrategyTitle: "Strategija monetizacije",
+          serviceStrategyText: "Analiziramo tvoju publiku i pronalazimo načine da unovčiš ono što već znaš.",
+          serviceWebTitle: "Sajtovi i aplikacije",
+          serviceWebText: "Digitalna iskustva koja jasno predstavljaju tvoju ponudu i podržavaju tvoj rast.",
+          serviceLaunchTitle: "Priprema i lansiranje",
+          serviceLaunchText: "Pripremamo tvoj proizvod za prodaju i vodimo lansiranje — od vebinara do pilot-projekta.",
+          servicePartnershipTitle: "Partnerstvo za rast",
+          servicePartnershipText: "Preuzimamo strategiju i realizaciju, uz dogovorenu podelu prihoda od prodaje.",
+          audienceEyebrow: "SA KIM SARAĐUJEMO",
+          audienceTitle: "Imaš potrebu.<br><span>Hajde da nađemo rešenje.</span>",
+          audienceCreatorsTitle: "Kreatori",
+          audienceCreatorsText: "Već imaš publiku, ali ti nedostaju vreme ili znanje da napraviš i prodaš svoj proizvod.",
+          audienceDigitalTitle: "Svima kojima treba digitalno rešenje",
+          audienceDigitalText: "Treba ti digitalni proizvod, sajt ili aplikacija? Pomažemo ti da razradiš ideju i sprovedeš je u delo.",
+          aboutEyebrow: "UPOZNAJ VAMSA STUDIO",
+          aboutTitle: "Znanje, pažnja i <span>profesionalan pristup.</span>",
+          aboutTextOne: "VAMSA Studio spaja strategiju, kreativnost i realizaciju kako bismo napravili digitalna rešenja prilagođena tvojim ciljevima. Završili smo Monetise, profesionalni program za digitalne proizvode i growth operativu.",
+          aboutTextTwo: "Svakom projektu pristupamo profesionalno — uz jasnu komunikaciju, pažljivo planiranje i posvećenost realizaciji. Od strategije do lansiranja, radimo zajedno sa tobom i prilagođavamo proces tvojim potrebama.",
+          certificateEyebrow: "ZAVRŠENA OBUKA",
+          certificateLink: "Pogledaj sertifikat",
+          certificateTitle: "Originalni Monetise sertifikat, prikazan neizmenjen",
+          certificateNote: "Originalni sertifikat je prikazan neizmenjen.",
+          aboutLink: "Upoznajmo se",
+          teamEyebrow: "LJUDI IZA PROCESA",
+          teamTitle: "Mali tim.<br><span>Velike ideje.</span>",
+          teamSummary: "Četiri osobe, različiti talenti i zajednički fokus na onome što zaista daje rezultate.",
+          contactEyebrow: "TVOJ SLEDEĆI KORAK",
+          contactTitle: "Šta ti<br><span>je potrebno?</span>",
+          contactText: "Javi nam šta ti treba — digitalni proizvod, sajt, aplikacija ili pomoć oko lansiranja. Ako ne znaš kako da povećaš publiku i iskoristiš njen potencijal, samo nam se javi. Iskreno ćemo ti reći kako možemo da pomognemo.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Ideja%20za%20saradnju",
+          footerHome: "VAMSA Studio — na vrh",
+          footerTagline: "Ideje koje postaju proizvodi.",
+          socialLinks: "Pratite VAMSA Studio"
+        },
+        es: {
+          metaDescription: "VAMSA Studio ayuda a creadores y empresas a convertir sus conocimientos en productos digitales que venden, desde la idea hasta el lanzamiento.",
+          pageTitle: "VAMSA Studio — De la idea al lanzamiento",
+          mainNavigation: "Navegación principal",
+          navServices: "Servicios",
+          navAbout: "Nosotros",
+          navTeam: "Equipo",
+          navContact: "Hablemos",
+          languageSelector: "Elegir idioma",
+          heroEyebrow: "ESTRATEGIA · CONTENIDO · CRECIMIENTO",
+          heroTitle: "Tus conocimientos.<br><span>Un producto que</span><br><span>vende.</span>",
+          heroIntro: "Ayudamos a creadores y a quienes necesitan productos digitales, sitios web o aplicaciones, desde la planificación hasta la entrega.",
+          heroCta: "Cuéntanos qué necesitas",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Necesito%20un%20producto%20digital%2C%20sitio%20web%20o%20aplicaci%C3%B3n",
+          exploreServices: "Descubre nuestros servicios",
+          heroNote: "Para creadores con audiencia y empresas listas para dar el siguiente paso.",
+          heroImageAlt: "VAMSA Studio — estudio creativo moderno con un logotipo dorado",
+          imageCaptionTitle: "De la idea al lanzamiento",
+          imageCaptionText: "Un equipo. Todo el proceso.",
+          tickerLabel: "Nuestro enfoque",
+          tickerProducts: "Productos digitales",
+          tickerCopy: "Textos de venta",
+          tickerWebsites: "Sitios web y aplicaciones",
+          tickerGrowth: "Lanzamiento y crecimiento",
+          servicesEyebrow: "LO QUE HACEMOS",
+          servicesTitle: "De conocimientos valiosos<br>a <span>un producto excepcional.</span>",
+          servicesSummary: "Desde productos digitales hasta sitios web y aplicaciones: encontramos contigo la solución adecuada.",
+          serviceProductsTitle: "Productos digitales",
+          serviceProductsText: "eBooks, cursos en vídeo o programas de coaching: de la estructura al contenido final.",
+          serviceCopyTitle: "Textos de venta",
+          serviceCopyText: "Páginas de venta, guiones VSL, correos y materiales que impulsan la compra.",
+          serviceStrategyTitle: "Estrategia de monetización",
+          serviceStrategyText: "Analizamos tu audiencia y encontramos formas de monetizar lo que ya sabes.",
+          serviceWebTitle: "Sitios web y aplicaciones",
+          serviceWebText: "Experiencias digitales que presentan tu oferta con claridad e impulsan tu crecimiento.",
+          serviceLaunchTitle: "Preparación y lanzamiento",
+          serviceLaunchText: "Preparamos tu producto para vender y guiamos su lanzamiento, desde un webinar hasta un piloto.",
+          servicePartnershipTitle: "Alianza de crecimiento",
+          servicePartnershipText: "Nos encargamos de la estrategia y la ejecución con una participación acordada en los ingresos.",
+          audienceEyebrow: "CON QUIÉN TRABAJAMOS",
+          audienceTitle: "Tienes una necesidad.<br><span>Busquemos una solución.</span>",
+          audienceCreatorsTitle: "Creadores",
+          audienceCreatorsText: "Ya tienes una audiencia, pero te falta tiempo o experiencia para crear y vender tu producto.",
+          audienceDigitalTitle: "Para quienes necesitan una solución digital",
+          audienceDigitalText: "¿Necesitas un producto digital, sitio web o aplicación? Te ayudamos a darle forma a la idea y hacerla realidad.",
+          aboutEyebrow: "CONOCE VAMSA STUDIO",
+          aboutTitle: "Conocimiento, dedicación y <span>un enfoque profesional.</span>",
+          aboutTextOne: "VAMSA Studio une estrategia, creatividad y ejecución para crear soluciones digitales adaptadas a tus objetivos. Completamos Monetise, un programa profesional sobre productos digitales y operaciones de crecimiento.",
+          aboutTextTwo: "Abordamos cada proyecto con profesionalidad: comunicación clara, planificación cuidadosa y compromiso con los resultados. Desde la estrategia hasta el lanzamiento, trabajamos contigo y adaptamos el proceso a tus necesidades.",
+          certificateEyebrow: "FORMACIÓN COMPLETADA",
+          certificateLink: "Ver certificado",
+          certificateTitle: "Certificado original de Monetise, mostrado sin modificaciones",
+          certificateNote: "El certificado original se muestra sin modificaciones.",
+          aboutLink: "Conozcámonos",
+          teamEyebrow: "LAS PERSONAS DETRÁS DEL PROCESO",
+          teamTitle: "Equipo pequeño.<br><span>Grandes ideas.</span>",
+          teamSummary: "Cuatro personas, talentos distintos y un objetivo común: centrarnos en lo que funciona.",
+          contactEyebrow: "TU SIGUIENTE PASO",
+          contactTitle: "¿Qué<br><span>necesitas?</span>",
+          contactText: "Cuéntanos qué necesitas: un producto digital, un sitio web, una aplicación o ayuda con el lanzamiento. Si no sabes cómo hacer crecer tu audiencia y aprovechar su potencial, escríbenos. Te diremos con sinceridad cómo podemos ayudarte.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Idea%20de%20colaboraci%C3%B3n",
+          footerHome: "VAMSA Studio — volver arriba",
+          footerTagline: "Ideas que se convierten en productos.",
+          socialLinks: "Sigue a VAMSA Studio"
+        },
+        zh: {
+          metaDescription: "VAMSA Studio 帮助创作者和企业将专业知识转化为畅销的数字产品，从创意到上线全程支持。",
+          pageTitle: "VAMSA Studio — 从创意到上线",
+          mainNavigation: "主导航",
+          navServices: "服务",
+          navAbout: "关于我们",
+          navTeam: "团队",
+          navContact: "联系我们",
+          languageSelector: "选择语言",
+          heroEyebrow: "策略 · 内容 · 增长",
+          heroTitle: "你的专业知识。<br><span>打造畅销</span><br><span>产品。</span>",
+          heroIntro: "我们帮助创作者和有数字产品、网站或应用需求的客户，从规划到交付实现目标。",
+          heroCta: "告诉我们你的需求",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E6%88%91%E9%9C%80%E8%A6%81%E6%95%B0%E5%AD%97%E4%BA%A7%E5%93%81%E3%80%81%E7%BD%91%E7%AB%99%E6%88%96%E5%BA%94%E7%94%A8",
+          exploreServices: "了解我们的服务",
+          heroNote: "服务拥有受众的创作者，以及准备迈出下一步的企业。",
+          heroImageAlt: "VAMSA Studio — 以金色标志为特色的现代创意工作室",
+          imageCaptionTitle: "从创意到上线",
+          imageCaptionText: "一个团队，全程服务。",
+          tickerLabel: "我们的服务方式",
+          tickerProducts: "数字产品",
+          tickerCopy: "销售文案",
+          tickerWebsites: "网站与应用",
+          tickerGrowth: "上线与增长",
+          servicesEyebrow: "我们的工作",
+          servicesTitle: "将专业知识<br>转化为<span>卓越产品。</span>",
+          servicesSummary: "从数字产品到网站和应用，我们与你一起找到合适的解决方案。",
+          serviceProductsTitle: "数字产品",
+          serviceProductsText: "电子书、视频课程或辅导项目，从内容架构到最终成品。",
+          serviceCopyTitle: "销售文案",
+          serviceCopyText: "销售页面、视频销售脚本、电子邮件和促进购买的营销材料。",
+          serviceStrategyTitle: "变现策略",
+          serviceStrategyText: "分析你的受众，找到将现有知识转化为收入的方法。",
+          serviceWebTitle: "网站与应用",
+          serviceWebText: "清晰展示你的服务并助力业务增长的数字体验。",
+          serviceLaunchTitle: "搭建与上线",
+          serviceLaunchText: "帮助产品做好销售准备，并指导发布流程，从网络研讨会到试点项目。",
+          servicePartnershipTitle: "增长合作",
+          servicePartnershipText: "负责策略与执行，并按约定分享销售收入。",
+          audienceEyebrow: "我们的服务对象",
+          audienceTitle: "你有需求。<br><span>我们一起寻找解决方案。</span>",
+          audienceCreatorsTitle: "创作者",
+          audienceCreatorsText: "你已经拥有受众，但缺少时间或专业能力来打造并销售自己的产品。",
+          audienceDigitalTitle: "需要数字解决方案的客户",
+          audienceDigitalText: "需要数字产品、网站或应用？我们帮你完善想法并将其付诸实践。",
+          aboutEyebrow: "认识 VAMSA STUDIO",
+          aboutTitle: "专业知识、用心服务与<span>专业态度。</span>",
+          aboutTextOne: "VAMSA Studio 融合策略、创意与执行，为你的目标打造定制化数字解决方案。我们完成了 Monetise 专业培训，专注于数字产品与增长运营。",
+          aboutTextTwo: "我们以专业态度对待每个项目：沟通清晰、规划周全、专注交付。从策略到上线，我们与你并肩合作，并根据你的需求调整流程。",
+          certificateEyebrow: "已完成培训",
+          certificateLink: "查看证书",
+          certificateTitle: "未经修改的 Monetise 原始证书",
+          certificateNote: "此处展示未经修改的原始证书。",
+          aboutLink: "认识我们",
+          teamEyebrow: "团队成员",
+          teamTitle: "精干团队。<br><span>无限创意。</span>",
+          teamSummary: "四位成员，各有所长，专注于真正有效的方法。",
+          contactEyebrow: "迈出下一步",
+          contactTitle: "你需要<br><span>什么？</span>",
+          contactText: "告诉我们你的需求：数字产品、网站、应用，或发布支持。如果你不确定如何扩大受众并发挥其潜力，欢迎联系我们。我们会坦诚地告诉你如何提供帮助。",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E5%90%88%E4%BD%9C%E6%83%B3%E6%B3%95",
+          footerHome: "VAMSA Studio — 返回顶部",
+          footerTagline: "让创意成为产品。",
+          socialLinks: "关注 VAMSA Studio"
+        },
+        ja: {
+          metaDescription: "VAMSA Studioは、クリエイターや企業の知識を売れるデジタル商品へと形にします。アイデアから公開までサポートします。",
+          pageTitle: "VAMSA Studio — アイデアを形に",
+          mainNavigation: "メインナビゲーション",
+          navServices: "サービス",
+          navAbout: "私たちについて",
+          navTeam: "チーム",
+          navContact: "お問い合わせ",
+          languageSelector: "言語を選択",
+          heroEyebrow: "戦略 · コンテンツ · 成長",
+          heroTitle: "あなたの知識を、<br><span>売れる</span><br><span>商品に。</span>",
+          heroIntro: "デジタル商品、ウェブサイト、アプリを必要とするクリエイターや皆さまを、企画から実現までサポートします。",
+          heroCta: "ご要望をお聞かせください",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%95%86%E5%93%81%E3%83%BB%E3%82%B5%E3%82%A4%E3%83%88%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%9B%B8%E8%AB%87",
+          exploreServices: "サービスを見る",
+          heroNote: "フォロワーを持つクリエイターと、次の一歩を目指す企業のために。",
+          heroImageAlt: "VAMSA Studio — ゴールドのロゴがあるモダンなクリエイティブスタジオ",
+          imageCaptionTitle: "アイデアから公開まで",
+          imageCaptionText: "ひとつのチームで、すべてをサポート。",
+          tickerLabel: "私たちのアプローチ",
+          tickerProducts: "デジタル商品",
+          tickerCopy: "セールスコピー",
+          tickerWebsites: "ウェブサイトとアプリ",
+          tickerGrowth: "公開と成長",
+          servicesEyebrow: "サービス内容",
+          servicesTitle: "知識を活かして<br><span>優れた商品を。</span>",
+          servicesSummary: "デジタル商品からウェブサイト、アプリまで。最適な解決策を一緒に見つけます。",
+          serviceProductsTitle: "デジタル商品",
+          serviceProductsText: "電子書籍、動画講座、コーチングプログラムを構成から完成までサポート。",
+          serviceCopyTitle: "セールスコピー",
+          serviceCopyText: "販売ページ、動画セールス台本、メールなど、購入につながるコンテンツ。",
+          serviceStrategyTitle: "収益化戦略",
+          serviceStrategyText: "あなたのオーディエンスを分析し、今ある知識を収益につなげる方法を探します。",
+          serviceWebTitle: "ウェブサイトとアプリ",
+          serviceWebText: "サービスの魅力を伝え、成長を支えるデジタル体験を設計します。",
+          serviceLaunchTitle: "準備とローンチ",
+          serviceLaunchText: "商品を販売できる状態に整え、ウェビナーから試験運用まで公開をサポート。",
+          servicePartnershipTitle: "成長パートナーシップ",
+          servicePartnershipText: "戦略と実行を担い、合意した売上を分配するパートナーシップ。",
+          audienceEyebrow: "こんな方をサポートします",
+          audienceTitle: "課題があるなら、<br><span>一緒に解決しましょう。</span>",
+          audienceCreatorsTitle: "クリエイター",
+          audienceCreatorsText: "すでにフォロワーがいるものの、商品を作って販売する時間や専門知識が足りない方。",
+          audienceDigitalTitle: "デジタルソリューションを必要とする方",
+          audienceDigitalText: "デジタル商品、サイト、アプリが必要ですか？アイデアを形にするお手伝いをします。",
+          aboutEyebrow: "VAMSA STUDIOについて",
+          aboutTitle: "知識と丁寧さ、<span>プロフェッショナルな姿勢。</span>",
+          aboutTextOne: "VAMSA Studioは戦略、創造性、実行力を組み合わせ、お客様の目標に合わせたデジタルソリューションを制作します。デジタル商品とグロース運用の専門プログラム「Monetise」を修了しました。",
+          aboutTextTwo: "明確なコミュニケーション、丁寧な計画、確かな実行を大切に、すべてのプロジェクトに取り組みます。戦略から公開まで、お客様と連携しながらニーズに合わせて進めます。",
+          certificateEyebrow: "修了したトレーニング",
+          certificateLink: "修了証を見る",
+          certificateTitle: "改変していないMonetiseの原本修了証",
+          certificateNote: "修了証は原本のまま掲載しています。",
+          aboutLink: "まずはお話ししましょう",
+          teamEyebrow: "プロジェクトを支えるメンバー",
+          teamTitle: "小さなチーム。<br><span>大きなアイデア。</span>",
+          teamSummary: "4人の異なる才能が集まり、本当に成果につながることに取り組みます。",
+          contactEyebrow: "次の一歩へ",
+          contactTitle: "何が<br><span>必要ですか？</span>",
+          contactText: "デジタル商品、ウェブサイト、アプリ、ローンチ支援など、ご要望をお聞かせください。フォロワーを増やし、その可能性を活かす方法がわからない場合も、お気軽にご相談ください。どのようにお手伝いできるか、率直にお伝えします。",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E5%8D%94%E6%A5%AD%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87",
+          footerHome: "VAMSA Studio — ページ上部へ",
+          footerTagline: "アイデアを商品に。",
+          socialLinks: "VAMSA Studioをフォロー"
+        },
+        hi: {
+          metaDescription: "VAMSA Studio क्रिएटर्स और व्यवसायों को उनके ज्ञान को बिकने वाले डिजिटल उत्पादों में बदलने में मदद करता है — विचार से लॉन्च तक।",
+          pageTitle: "VAMSA Studio — विचार से लॉन्च तक",
+          mainNavigation: "मुख्य नेविगेशन",
+          navServices: "सेवाएँ",
+          navAbout: "हमारे बारे में",
+          navTeam: "टीम",
+          navContact: "बात करें",
+          languageSelector: "भाषा चुनें",
+          heroEyebrow: "रणनीति · कंटेंट · विकास",
+          heroTitle: "आपका ज्ञान।<br><span>एक ऐसा उत्पाद</span><br><span>जो बिके।</span>",
+          heroIntro: "हम क्रिएटर्स और डिजिटल उत्पाद, वेबसाइट या ऐप चाहने वाले सभी लोगों की योजना से लेकर निर्माण तक मदद करते हैं।",
+          heroCta: "बताएँ आपको क्या चाहिए",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E0%A4%A1%E0%A4%BF%E0%A4%9C%E0%A4%BF%E0%A4%9F%E0%A4%B2%20%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%2C%20%E0%A4%B5%E0%A5%87%E0%A4%AC%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9F%20%E0%A4%AF%E0%A4%BE%20%E0%A4%90%E0%A4%AA",
+          exploreServices: "हमारी सेवाएँ देखें",
+          heroNote: "ऑडियंस वाले क्रिएटर्स और अगले कदम के लिए तैयार व्यवसायों हेतु।",
+          heroImageAlt: "VAMSA Studio — सुनहरे लोगो वाला आधुनिक क्रिएटिव स्टूडियो",
+          imageCaptionTitle: "विचार से लॉन्च तक",
+          imageCaptionText: "एक टीम। पूरी प्रक्रिया।",
+          tickerLabel: "हमारा तरीका",
+          tickerProducts: "डिजिटल उत्पाद",
+          tickerCopy: "सेल्स कॉपी",
+          tickerWebsites: "वेबसाइट और ऐप",
+          tickerGrowth: "लॉन्च और विकास",
+          servicesEyebrow: "हम क्या करते हैं",
+          servicesTitle: "कीमती ज्ञान से<br><span>बेहतरीन उत्पाद तक।</span>",
+          servicesSummary: "डिजिटल उत्पादों से लेकर वेबसाइट और ऐप तक — हम आपके लिए सही समाधान खोजते हैं।",
+          serviceProductsTitle: "डिजिटल उत्पाद",
+          serviceProductsText: "ई-बुक, वीडियो कोर्स या कोचिंग प्रोग्राम — रूपरेखा से तैयार कंटेंट तक।",
+          serviceCopyTitle: "सेल्स कॉपी",
+          serviceCopyText: "सेल्स पेज, VSL स्क्रिप्ट, ईमेल और खरीद को बढ़ावा देने वाली सामग्री।",
+          serviceStrategyTitle: "मॉनेटाइज़ेशन रणनीति",
+          serviceStrategyText: "हम आपकी ऑडियंस को समझकर आपके ज्ञान से कमाई के तरीके खोजते हैं।",
+          serviceWebTitle: "वेबसाइट और ऐप",
+          serviceWebText: "ऐसे डिजिटल अनुभव जो आपकी पेशकश को स्पष्ट करें और विकास में मदद करें।",
+          serviceLaunchTitle: "सेटअप और लॉन्च",
+          serviceLaunchText: "उत्पाद को बिक्री के लिए तैयार करके वेबिनार से पायलट तक लॉन्च में मदद करते हैं।",
+          servicePartnershipTitle: "ग्रोथ पार्टनरशिप",
+          servicePartnershipText: "रणनीति और क्रियान्वयन की जिम्मेदारी, बिक्री से तयशुदा राजस्व हिस्सेदारी के साथ।",
+          audienceEyebrow: "हम किनके साथ काम करते हैं",
+          audienceTitle: "आपकी ज़रूरत है।<br><span>आइए समाधान खोजें।</span>",
+          audienceCreatorsTitle: "क्रिएटर्स",
+          audienceCreatorsText: "आपकी ऑडियंस पहले से है, लेकिन उत्पाद बनाने और बेचने के लिए समय या विशेषज्ञता की कमी है।",
+          audienceDigitalTitle: "डिजिटल समाधान चाहने वाले सभी लोग",
+          audienceDigitalText: "डिजिटल उत्पाद, वेबसाइट या ऐप चाहिए? हम विचार को आकार देकर उसे साकार करने में मदद करते हैं।",
+          aboutEyebrow: "VAMSA STUDIO से मिलें",
+          aboutTitle: "ज्ञान, समर्पण और <span>पेशेवर दृष्टिकोण।</span>",
+          aboutTextOne: "VAMSA Studio रणनीति, रचनात्मकता और काम को अंजाम देने की क्षमता को मिलाकर आपके लक्ष्यों के अनुरूप डिजिटल समाधान बनाता है। हमने डिजिटल उत्पाद और ग्रोथ ऑपरेशंस का पेशेवर कार्यक्रम Monetise पूरा किया है।",
+          aboutTextTwo: "हम स्पष्ट संवाद, सोच-समझकर योजना और काम पूरा करने की प्रतिबद्धता के साथ हर प्रोजेक्ट पर काम करते हैं। रणनीति से लॉन्च तक, हम आपके साथ मिलकर आपकी ज़रूरतों के अनुसार प्रक्रिया अपनाते हैं।",
+          certificateEyebrow: "प्रशिक्षण पूरा",
+          certificateLink: "प्रमाणपत्र देखें",
+          certificateTitle: "Monetise का मूल प्रमाणपत्र, बिना बदलाव के",
+          certificateNote: "मूल प्रमाणपत्र बिना किसी बदलाव के दिखाया गया है।",
+          aboutLink: "मिलकर बात करें",
+          teamEyebrow: "इस प्रक्रिया के पीछे के लोग",
+          teamTitle: "छोटी टीम।<br><span>बड़े विचार।</span>",
+          teamSummary: "चार लोग, अलग-अलग हुनर और उन तरीकों पर साझा ध्यान जो सच में काम करते हैं।",
+          contactEyebrow: "आपका अगला कदम",
+          contactTitle: "आपको<br><span>क्या चाहिए?</span>",
+          contactText: "बताएँ आपको क्या चाहिए — डिजिटल उत्पाद, वेबसाइट, ऐप या लॉन्च में मदद। अगर ऑडियंस बढ़ाने और उसकी क्षमता का लाभ उठाने का तरीका स्पष्ट नहीं है, तो हमसे संपर्क करें। हम ईमानदारी से बताएँगे कि कैसे मदद कर सकते हैं।",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E0%A4%B8%E0%A4%B9%E0%A4%AF%E0%A5%8B%E0%A4%97%20%E0%A4%95%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B0",
+          footerHome: "VAMSA Studio — ऊपर जाएँ",
+          footerTagline: "विचारों से उत्पाद तक।",
+          socialLinks: "VAMSA Studio को फ़ॉलो करें"
+        },
+        it: {
+          metaDescription: "VAMSA Studio aiuta creator e aziende a trasformare le proprie conoscenze in prodotti digitali che vendono, dall'idea al lancio.",
+          pageTitle: "VAMSA Studio — Dall'idea al lancio",
+          mainNavigation: "Navigazione principale",
+          navServices: "Servizi",
+          navAbout: "Chi siamo",
+          navTeam: "Team",
+          navContact: "Parliamone",
+          languageSelector: "Scegli la lingua",
+          heroEyebrow: "STRATEGIA · CONTENUTI · CRESCITA",
+          heroTitle: "Le tue conoscenze.<br><span>Un prodotto che</span><br><span>vende.</span>",
+          heroIntro: "Aiutiamo creator e chiunque abbia bisogno di prodotti digitali, siti web o app, dalla pianificazione alla realizzazione.",
+          heroCta: "Raccontaci di cosa hai bisogno",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Mi%20serve%20un%20prodotto%20digitale%2C%20un%20sito%20web%20o%20un%27app",
+          exploreServices: "Scopri i nostri servizi",
+          heroNote: "Per creator con un pubblico e aziende pronte a fare il prossimo passo.",
+          heroImageAlt: "VAMSA Studio — moderno studio creativo con logo dorato",
+          imageCaptionTitle: "Dall'idea al lancio",
+          imageCaptionText: "Un team. L'intero processo.",
+          tickerLabel: "Il nostro approccio",
+          tickerProducts: "Prodotti digitali",
+          tickerCopy: "Testi di vendita",
+          tickerWebsites: "Siti web e app",
+          tickerGrowth: "Lancio e crescita",
+          servicesEyebrow: "COSA FACCIAMO",
+          servicesTitle: "Dalle conoscenze di valore<br>a <span>un prodotto eccellente.</span>",
+          servicesSummary: "Dai prodotti digitali ai siti web e alle app: troviamo insieme la soluzione giusta.",
+          serviceProductsTitle: "Prodotti digitali",
+          serviceProductsText: "eBook, corsi video o programmi di coaching: dalla struttura ai contenuti finali.",
+          serviceCopyTitle: "Testi di vendita",
+          serviceCopyText: "Pagine di vendita, script VSL, email e materiali che favoriscono l'acquisto.",
+          serviceStrategyTitle: "Strategia di monetizzazione",
+          serviceStrategyText: "Analizziamo il tuo pubblico e troviamo come monetizzare ciò che già sai.",
+          serviceWebTitle: "Siti web e app",
+          serviceWebText: "Esperienze digitali pensate per presentare chiaramente la tua offerta e sostenere la crescita.",
+          serviceLaunchTitle: "Preparazione e lancio",
+          serviceLaunchText: "Prepariamo il prodotto per la vendita e ti accompagniamo nel lancio, dal webinar al progetto pilota.",
+          servicePartnershipTitle: "Partnership per la crescita",
+          servicePartnershipText: "Ci occupiamo di strategia e realizzazione, con una quota concordata sui ricavi di vendita.",
+          audienceEyebrow: "CON CHI LAVORIAMO",
+          audienceTitle: "Hai un'esigenza.<br><span>Troviamo una soluzione.</span>",
+          audienceCreatorsTitle: "Creator",
+          audienceCreatorsText: "Hai già un pubblico, ma ti mancano tempo o competenze per creare e vendere il tuo prodotto.",
+          audienceDigitalTitle: "Per chi ha bisogno di una soluzione digitale",
+          audienceDigitalText: "Ti serve un prodotto digitale, un sito o un'app? Ti aiutiamo a sviluppare l'idea e a realizzarla.",
+          aboutEyebrow: "SCOPRI VAMSA STUDIO",
+          aboutTitle: "Competenze, cura e <span>un approccio professionale.</span>",
+          aboutTextOne: "VAMSA Studio unisce strategia, creatività e operatività per creare soluzioni digitali adatte ai tuoi obiettivi. Abbiamo completato Monetise, un programma professionale dedicato ai prodotti digitali e alle operazioni di crescita.",
+          aboutTextTwo: "Affrontiamo ogni progetto con professionalità, comunicazione chiara, pianificazione attenta e impegno concreto. Dalla strategia al lancio, lavoriamo al tuo fianco e adattiamo il processo alle tue esigenze.",
+          certificateEyebrow: "FORMAZIONE COMPLETATA",
+          certificateLink: "Visualizza il certificato",
+          certificateTitle: "Certificato originale Monetise, mostrato senza modifiche",
+          certificateNote: "Il certificato originale è mostrato senza modifiche.",
+          aboutLink: "Conosciamoci",
+          teamEyebrow: "LE PERSONE DIETRO IL PROCESSO",
+          teamTitle: "Un piccolo team.<br><span>Grandi idee.</span>",
+          teamSummary: "Quattro persone, talenti diversi e un obiettivo comune: concentrarci su ciò che funziona.",
+          contactEyebrow: "IL TUO PROSSIMO PASSO",
+          contactTitle: "Di cosa<br><span>hai bisogno?</span>",
+          contactText: "Raccontaci di cosa hai bisogno: un prodotto digitale, un sito web, un'app o supporto per il lancio. Se non sai come far crescere il tuo pubblico e valorizzarne il potenziale, contattaci. Ti diremo con sincerità come possiamo aiutarti.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Idea%20di%20collaborazione",
+          footerHome: "VAMSA Studio — torna all'inizio",
+          footerTagline: "Idee che diventano prodotti.",
+          socialLinks: "Segui VAMSA Studio"
+        }
+      };
+
+      const languageSelect = document.querySelector(".language-switch select");
+      const setLanguage = (language) => {
+        const selectedLanguage = translations[language] ? language : "en";
+        const dictionary = translations[selectedLanguage];
+        document.documentElement.lang = selectedLanguage;
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.textContent = dictionary[element.dataset.i18n];
+        });
+        document.querySelectorAll("[data-i18n-content]").forEach((element) => {
+          element.content = dictionary[element.dataset.i18nContent];
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+          element.innerHTML = dictionary[element.dataset.i18nHtml];
+        });
+        document.querySelectorAll("[data-i18n-href]").forEach((element) => {
+          element.href = dictionary[element.dataset.i18nHref];
+        });
+        document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+          element.setAttribute("aria-label", dictionary[element.dataset.i18nAriaLabel]);
+        });
+        document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+          element.alt = dictionary[element.dataset.i18nAlt];
+        });
+        document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+          element.title = dictionary[element.dataset.i18nTitle];
+        });
+        languageSelect.value = selectedLanguage;
+
+        localStorage.setItem("vamsa-language", selectedLanguage);
+      };
+
+      languageSelect.addEventListener("change", () => setLanguage(languageSelect.value));
+
+      const savedLanguage = localStorage.getItem("vamsa-language");
+      setLanguage(savedLanguage);
+    </script>
   </body>
 </html>

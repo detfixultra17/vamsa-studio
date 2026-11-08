@@ -94,6 +94,41 @@ a {
   font-weight: 500;
 }
 
+.language-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.language-switch select {
+  max-width: 138px;
+  padding: 9px 26px 9px 10px;
+  border: 1px solid #d5d9d0;
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.language-switch select:focus-visible {
+  outline: 2px solid #67843f;
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .main-nav a:not(.nav-cta):hover,
 .text-link:hover,
 .site-footer > a:not(.brand):hover {
@@ -744,6 +779,10 @@ h2 {
     gap: 17px;
   }
 
+  .language-switch select {
+    max-width: 126px;
+  }
+
   .service-card {
     min-height: 230px;
     padding-inline: 19px;
@@ -784,6 +823,12 @@ h2 {
   .main-nav .nav-cta {
     padding: 10px 12px;
     font-size: 11px;
+  }
+
+  .language-switch select {
+    max-width: 104px;
+    padding: 8px 18px 8px 6px;
+    font-size: 10px;
   }
 
   .hero {
