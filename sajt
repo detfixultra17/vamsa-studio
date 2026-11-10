@@ -1,0 +1,2 @@
+git remote add origin https://github.com/detfixultra17/vamsa-studio.git
+git push -u origin main
