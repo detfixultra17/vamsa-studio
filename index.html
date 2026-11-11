@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="styles.css?v=6">
   </head>
   <body>
+    <video class="ambient-background" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
+      <source src="pozanidan%20.mp4" type="video/mp4">
+    </video>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="VAMSA Studio home">
         <img class="brand-logo" src="sajt%20.jpeg" alt="">
@@ -36,6 +39,10 @@
             <option value="ja">日本語</option>
             <option value="hi">हिन्दी</option>
             <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+            <option value="pt">Português</option>
           </select>
         </label>
         <button class="theme-toggle" type="button" aria-label="Switch to light mode" data-i18n-aria-label="themeToLight">
@@ -48,19 +55,17 @@
     <main>
       <section class="hero section-wrap" id="home">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="heroEyebrow">STRATEGY · CONTENT · GROWTH</span></p>
           <h1 data-i18n-html="heroTitle">Your knowledge.<br><span>A product that</span><br><span>sells.</span></h1>
           <p class="hero-intro" data-i18n="heroIntro">
             We help creators and anyone who needs digital products, websites, or
             apps. We support every stage, from planning through delivery.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app" data-i18n-href="heroCtaHref">
-              <span data-i18n="heroCta">Tell us what you need</span><span aria-hidden="true">↗</span>
+            <a class="button button-primary" href="#contact">
+              <span data-i18n="heroCta">Apply</span><span aria-hidden="true">↗</span>
             </a>
             <a class="text-link" href="#services"><span data-i18n="exploreServices">Explore our services</span><span aria-hidden="true">↓</span></a>
           </div>
-          <p class="hero-note" data-i18n="heroNote">For creators with an audience and businesses ready for the next step.</p>
         </div>
         <div class="hero-image">
           <img
@@ -77,89 +82,139 @@
         </div>
       </section>
 
-      <div class="ticker" aria-label="Our approach" data-i18n-aria-label="tickerLabel">
-        <div class="ticker-inner">
-          <span data-i18n="tickerProducts">Digital products</span><i aria-hidden="true">✳</i>
-          <span data-i18n="tickerCopy">Sales copy</span><i aria-hidden="true">✳</i>
-          <span data-i18n="tickerWebsites">Websites and apps</span><i aria-hidden="true">✳</i>
-          <span data-i18n="tickerGrowth">Launch and growth</span><i aria-hidden="true">✳</i>
-          <span aria-hidden="true" data-i18n="tickerProducts">Digital products</span><i aria-hidden="true">✳</i>
-          <span aria-hidden="true" data-i18n="tickerCopy">Sales copy</span><i aria-hidden="true">✳</i>
-        </div>
-      </div>
-
       <section class="section-wrap services section-space" id="services">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-i18n="servicesEyebrow">WHAT WE DO</p>
-            <h2 data-i18n-html="servicesTitle">From valuable knowledge<br>to <span>an exceptional product.</span></h2>
+            <h2 data-i18n="servicesTitle">What You Get From Us</h2>
           </div>
-          <p class="section-summary" data-i18n="servicesSummary">
-            We create digital products, websites, and apps, working closely with you to find the right solution.
-          </p>
         </div>
         <div class="service-grid">
           <article class="service-card">
-            <span class="service-number">01</span>
-            <span class="service-icon" aria-hidden="true">✳</span>
+            <div class="service-visual service-visual-products" aria-hidden="true">
+              <div class="product-book product-book-back">
+                <span class="product-book-mark"></span>
+                <span class="product-book-lines"></span>
+              </div>
+              <div class="product-book product-book-front">
+                <span class="product-book-kicker">VAMSA STUDIO</span>
+                <span class="product-book-mark"></span>
+                <span class="product-book-lines"></span>
+              </div>
+              <span class="product-orbit product-orbit-one"></span>
+              <span class="product-orbit product-orbit-two"></span>
+            </div>
             <h3 data-i18n="serviceProductsTitle">Digital products</h3>
-            <p data-i18n="serviceProductsText">eBooks, video courses, and coaching programs, developed from the initial outline to the finished content.</p>
+            <p data-i18n="serviceProductsText">eBooks, video courses, and coaching programs built to convert and scale.</p>
           </article>
           <article class="service-card">
-            <span class="service-number">02</span>
-            <span class="service-icon" aria-hidden="true">↗</span>
-            <h3 data-i18n="serviceCopyTitle">Sales copy</h3>
-            <p data-i18n="serviceCopyText">Sales pages, VSL scripts, emails, and materials that lead to a purchase.</p>
+            <div class="service-visual service-visual-websites" aria-hidden="true">
+              <div class="browser-window">
+                <div class="browser-toolbar"><i></i><i></i><i></i><span></span></div>
+                <div class="browser-page">
+                  <div class="browser-copy"><span></span><b></b><i></i><i></i><em></em></div>
+                  <div class="browser-art"><span></span><i></i></div>
+                </div>
+                <div class="browser-footer"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <h3 data-i18n="serviceWebTitle">Websites</h3>
+            <p data-i18n="serviceWebText">High-converting, modern web experiences designed to grow your brand.</p>
           </article>
           <article class="service-card">
-            <span class="service-number">03</span>
-            <span class="service-icon" aria-hidden="true">◎</span>
-            <h3 data-i18n="serviceStrategyTitle">Monetization strategy</h3>
-            <p data-i18n="serviceStrategyText">We analyze your audience and find ways to monetize what you already know.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <span class="service-icon" aria-hidden="true">⌁</span>
-            <h3 data-i18n="serviceWebTitle">Websites and apps</h3>
-            <p data-i18n="serviceWebText">Digital experiences designed to showcase your offer and support your growth.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-number">05</span>
-            <span class="service-icon" aria-hidden="true">◉</span>
-            <h3 data-i18n="serviceLaunchTitle">Setup and launch</h3>
-            <p data-i18n="serviceLaunchText">We prepare your product for sale and guide the launch, from webinars to pilot programs.</p>
-          </article>
-          <article class="service-card service-card-highlight">
-            <span class="service-number">06</span>
-            <span class="service-icon" aria-hidden="true">↔</span>
-            <h3 data-i18n="servicePartnershipTitle">Growth partnership</h3>
-            <p data-i18n="servicePartnershipText">We take the lead on strategy and execution, with an agreed share of sales revenue.</p>
+            <div class="service-visual service-visual-apps" aria-hidden="true">
+              <div class="app-phone">
+                <div class="app-screen">
+                  <span class="app-status"></span>
+                  <span class="app-greeting"></span>
+                  <span class="app-balance"></span>
+                  <div class="app-actions"><i></i><i></i><i></i></div>
+                  <span class="app-row"></span>
+                  <span class="app-row"></span>
+                  <span class="app-row"></span>
+                  <span class="app-tabs"></span>
+                </div>
+              </div>
+              <span class="app-orbit app-orbit-one"></span>
+              <span class="app-orbit app-orbit-two"></span>
+            </div>
+            <h3 data-i18n="serviceAppsTitle">Mobile Apps</h3>
+            <p data-i18n="serviceAppsText">iOS, Android, and cross-platform applications built for real users.</p>
           </article>
         </div>
       </section>
 
-      <section class="audience-band">
-        <div class="section-wrap audience-content">
-          <div>
-            <p class="eyebrow" data-i18n="audienceEyebrow">WHO WE WORK WITH</p>
-            <h2 data-i18n-html="audienceTitle">You have a need.<br><span>Let's find a solution.</span></h2>
-          </div>
-          <div class="audience-list">
-            <article>
-              <span class="audience-symbol" aria-hidden="true">01</span>
-              <div>
-                <h3 data-i18n="audienceCreatorsTitle">Creators</h3>
-                <p data-i18n="audienceCreatorsText">You already have an audience, but need the time or expertise to create and sell your product.</p>
-              </div>
+      <section class="partnership-section section-wrap section-space" id="partnership">
+        <h2 class="partnership-title" data-i18n="partnershipTitle">Growth Partnership Model</h2>
+        <div class="revenue-process">
+          <h3 data-i18n="revenueProcessTitle">The Revenue Share Process</h3>
+          <div class="process-steps">
+            <article class="process-step">
+              <span class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M17 29c0-2.8-6-6.3-6-13a13 13 0 0 1 26 0c0 6.7-6 10.2-6 13H17Z"/><path d="M18 34h12M20 39h8M20 19a5 5 0 0 1 5-5"/></svg>
+              </span>
+              <p data-i18n="processIdea">Your Idea</p>
             </article>
-            <article>
-              <span class="audience-symbol" aria-hidden="true">02</span>
-              <div>
-                <h3 data-i18n="audienceDigitalTitle">Anyone who needs a digital solution</h3>
-                <p data-i18n="audienceDigitalText">Need a digital product, website, or app? We help you shape the idea and bring it to life.</p>
-              </div>
+            <article class="process-step">
+              <span class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M29 8a9 9 0 0 0-11 11L9 28a5 5 0 0 0 7 7l9-9a9 9 0 0 0 11-11l-6 6-7-7 6-6Z"/><path d="m13 31 4 4"/></svg>
+              </span>
+              <p data-i18n="processBuild">We Build</p>
+            </article>
+            <article class="process-step">
+              <span class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M9 8v31h32"/><path d="m15 30 9-9 7 5 10-13"/><circle cx="15" cy="30" r="2"/><circle cx="24" cy="21" r="2"/><circle cx="31" cy="26" r="2"/><circle cx="41" cy="13" r="2"/></svg>
+              </span>
+              <p data-i18n="processSells">Product Sells</p>
+            </article>
+            <article class="process-step">
+              <span class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="m8 24 6-6 8 1 4 4-4 4-6-1-3 3-5-5Z"/><path d="m40 24-6-6-8 1-4 4 4 4 6-1 3 3 5-5Z"/><path d="m18 27 7 7a3 3 0 0 0 4-4l-3-3M22 23l8 8a3 3 0 0 0 4-4l-7-7"/></svg>
+              </span>
+              <p data-i18n="processShare">We Share</p>
             </article>
           </div>
+          <p class="process-note"><strong data-i18n="processZeroLead">Zero investment, zero costs.</strong> <span data-i18n="processZeroText">Revenue is earned only when the product sells. Earnings are automatically split according to our agreement through our app — no risk, no hidden fees.</span></p>
+        </div>
+        <div class="partnership-details">
+          <div class="partnership-included">
+            <h3 data-i18n="partnershipIncluded">What's Included</h3>
+            <ul>
+              <li data-i18n="partnershipSetup">Platform setup &amp; product delivery</li>
+              <li data-i18n="partnershipEditing">Content editing included</li>
+              <li data-i18n="partnershipScripts">Scripts &amp; hooks for Reels, TikToks, and social content</li>
+              <li data-i18n="partnershipLaunch">Product launch strategy &amp; Stories promotion</li>
+              <li data-i18n="partnershipSupport">Customer support included</li>
+            </ul>
+          </div>
+          <div class="partnership-deal">
+            <h3 data-i18n="partnershipDeal">The Deal</h3>
+            <p data-i18n-html="partnershipDealText"><strong>Zero upfront investment required.</strong> We build and launch together — your success is our success. Revenue share means we're fully aligned with your growth from day one.</p>
+            <div class="partnership-callout">
+              <span aria-hidden="true">↗</span>
+              <strong data-i18n="partnershipNoCapital">No capital needed to get started.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ownership-section section-wrap section-space" id="ownership">
+        <div class="ownership-heading">
+          <h2 data-i18n="ownershipTitle">Full Ownership Option</h2>
+          <p data-i18n="ownershipIntro">Prefer to own everything outright? Buy any service as a standalone project and walk away with complete control.</p>
+        </div>
+        <div class="ownership-grid">
+          <article class="ownership-card">
+            <h3 data-i18n="ownershipProductTitle">Your Product</h3>
+            <p data-i18n="ownershipProductText">Own the digital product, website, or app outright.</p>
+          </article>
+          <article class="ownership-card">
+            <h3 data-i18n="ownershipRightsTitle">Full Rights</h3>
+            <p data-i18n="ownershipRightsText">Complete control and full intellectual property rights.</p>
+          </article>
+          <article class="ownership-card">
+            <h3 data-i18n="ownershipStandaloneTitle">Standalone</h3>
+            <p data-i18n="ownershipStandaloneText">No ongoing revenue share — one project, one payment.</p>
+          </article>
         </div>
       </section>
 
@@ -321,7 +376,7 @@
           heroEyebrow: "STRATEGY · CONTENT · GROWTH",
           heroTitle: "Your knowledge.<br><span>A product that</span><br><span>sells.</span>",
           heroIntro: "We help creators and businesses bring digital products, websites, and apps to life, from planning through delivery.",
-          heroCta: "Tell us what you need",
+          heroCta: "Apply",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app",
           exploreServices: "Explore our services",
           heroNote: "For creators with an audience and businesses ready for the next step.",
@@ -334,20 +389,47 @@
           tickerWebsites: "Websites and apps",
           tickerGrowth: "Launch and growth",
           servicesEyebrow: "WHAT WE DO",
-          servicesTitle: "From valuable knowledge<br>to <span>an exceptional product.</span>",
+          servicesTitle: "What You Get From Us",
           servicesSummary: "We create digital products, websites, and apps, working closely with you to find the right solution.",
           serviceProductsTitle: "Digital products",
-          serviceProductsText: "eBooks, video courses, and coaching programs, developed from the initial outline to the finished content.",
+          serviceProductsText: "eBooks, video courses, and coaching programs built to convert and scale.",
           serviceCopyTitle: "Sales copy",
           serviceCopyText: "Sales pages, VSL scripts, emails, and materials that lead to a purchase.",
           serviceStrategyTitle: "Monetization strategy",
           serviceStrategyText: "We analyze your audience and find ways to monetize what you already know.",
-          serviceWebTitle: "Websites and apps",
-          serviceWebText: "Digital experiences designed to showcase your offer and support your growth.",
+          serviceWebTitle: "Websites",
+          serviceWebText: "High-converting, modern web experiences designed to grow your brand.",
+          serviceAppsTitle: "Mobile Apps",
+          serviceAppsText: "iOS, Android, and cross-platform applications built for real users.",
+          partnershipTitle: "Growth Partnership Model",
+          revenueProcessTitle: "The Revenue Share Process",
+          processIdea: "Your Idea",
+          processBuild: "We Build",
+          processSells: "Product Sells",
+          processShare: "We Share",
+          processZeroLead: "Zero investment, zero costs.",
+          processZeroText: "Revenue is earned only when the product sells. Earnings are automatically split according to our agreement through our app — no risk, no hidden fees.",
+          partnershipIncluded: "What's Included",
+          partnershipSetup: "Platform setup & product delivery",
+          partnershipEditing: "Content editing included",
+          partnershipScripts: "Scripts & hooks for Reels, TikToks, and social content",
+          partnershipLaunch: "Product launch strategy & Stories promotion",
+          partnershipSupport: "Customer support included",
+          partnershipDeal: "The Deal",
+          partnershipDealText: "<strong>Zero upfront investment required.</strong> We build and launch together — your success is our success. Revenue share means we're fully aligned with your growth from day one.",
+          partnershipNoCapital: "No capital needed to get started.",
           serviceLaunchTitle: "Setup and launch",
           serviceLaunchText: "We prepare your product for sale and guide the launch, from webinars to pilot programs.",
           servicePartnershipTitle: "Growth partnership",
           servicePartnershipText: "We take the lead on strategy and execution, with an agreed share of sales revenue.",
+          ownershipTitle: "Full Ownership Option",
+          ownershipIntro: "Prefer to own everything outright? Buy any service as a standalone project and walk away with complete control.",
+          ownershipProductTitle: "Your Product",
+          ownershipProductText: "Own the digital product, website, or app outright.",
+          ownershipRightsTitle: "Full Rights",
+          ownershipRightsText: "Complete control and full intellectual property rights.",
+          ownershipStandaloneTitle: "Standalone",
+          ownershipStandaloneText: "No ongoing revenue share — one project, one payment.",
           audienceEyebrow: "WHO WE WORK WITH",
           audienceTitle: "You have a need.<br><span>Let's find a solution.</span>",
           audienceCreatorsTitle: "Creators",
@@ -391,7 +473,7 @@
           heroEyebrow: "STRATEGIJA · SADRŽAJ · RAST",
           heroTitle: "Tvoje znanje.<br><span>Proizvod koji</span><br><span>se prodaje.</span>",
           heroIntro: "Pomažemo kreatorima i preduzećima da osmisle i izrade digitalne proizvode, sajtove i aplikacije, od planiranja do realizacije.",
-          heroCta: "Reci nam šta ti treba",
+          heroCta: "Aplicirajte",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Potreban%20mi%20je%20digitalni%20proizvod%2C%20sajt%20ili%20aplikacija",
           exploreServices: "Istraži naše usluge",
           heroNote: "Za kreatore sa publikom i preduzeća spremna za sledeći korak.",
@@ -404,20 +486,47 @@
           tickerWebsites: "Sajtovi i aplikacije",
           tickerGrowth: "Lansiranje i rast",
           servicesEyebrow: "ČIME SE BAVIMO",
-          servicesTitle: "Od vrednog znanja<br>do <span>izuzetnog proizvoda.</span>",
+          servicesTitle: "Šta dobijaš od nas",
           servicesSummary: "Razvijamo digitalne proizvode, sajtove i aplikacije i zajedno s tobom pronalazimo pravo rešenje.",
           serviceProductsTitle: "Digitalni proizvodi",
-          serviceProductsText: "e-knjige, video-kursevi i coaching programi, od početne strukture do završenog sadržaja.",
+          serviceProductsText: "e-knjige, video-kursevi i coaching programi osmišljeni da donesu rezultate i rast.",
           serviceCopyTitle: "Prodajni tekstovi",
           serviceCopyText: "Prodajne stranice, VSL skripte, imejlovi i materijali koji vode do kupovine.",
           serviceStrategyTitle: "Strategija monetizacije",
           serviceStrategyText: "Analiziramo tvoju publiku i pronalazimo načine da unovčiš ono što već znaš.",
-          serviceWebTitle: "Sajtovi i aplikacije",
-          serviceWebText: "Digitalna iskustva koja jasno predstavljaju tvoju ponudu i podržavaju tvoj rast.",
+          serviceWebTitle: "Sajtovi",
+          serviceWebText: "Moderni sajtovi osmišljeni da privuku klijente i pomognu rastu tvog brenda.",
+          serviceAppsTitle: "Mobilne aplikacije",
+          serviceAppsText: "iOS, Android i cross-platform aplikacije napravljene za stvarne korisnike.",
+          partnershipTitle: "Model partnerstva za rast",
+          revenueProcessTitle: "Kako funkcioniše podela prihoda",
+          processIdea: "Tvoja ideja",
+          processBuild: "Mi gradimo",
+          processSells: "Proizvod se prodaje",
+          processShare: "Delimo prihod",
+          processZeroLead: "Bez ulaganja i početnih troškova.",
+          processZeroText: "Prihod ostvarujemo tek kada se proizvod proda. Zarada se automatski deli prema našem dogovoru putem aplikacije — bez rizika i skrivenih troškova.",
+          partnershipIncluded: "Šta je uključeno",
+          partnershipSetup: "Postavljanje platforme i isporuka proizvoda",
+          partnershipEditing: "Uređivanje sadržaja",
+          partnershipScripts: "Skripte i uvodne rečenice za Reels, TikTok i društvene mreže",
+          partnershipLaunch: "Strategija lansiranja proizvoda i promocija kroz storije",
+          partnershipSupport: "Korisnička podrška",
+          partnershipDeal: "Dogovor",
+          partnershipDealText: "<strong>Nije potrebno početno ulaganje.</strong> Zajedno gradimo i lansiramo — tvoj uspeh je i naš uspeh. Podela prihoda znači da smo od prvog dana usklađeni s tvojim rastom.",
+          partnershipNoCapital: "Za početak ti nije potreban kapital.",
           serviceLaunchTitle: "Priprema i lansiranje",
           serviceLaunchText: "Pripremamo tvoj proizvod za prodaju i vodimo lansiranje, od vebinara do pilot-projekta.",
           servicePartnershipTitle: "Partnerstvo za rast",
           servicePartnershipText: "Preuzimamo strategiju i realizaciju, uz dogovorenu podelu prihoda od prodaje.",
+          ownershipTitle: "Opcija potpunog vlasništva",
+          ownershipIntro: "Želiš da sve bude u tvom vlasništvu? Izaberi bilo koju uslugu kao samostalan projekat i zadrži potpunu kontrolu.",
+          ownershipProductTitle: "Tvoj proizvod",
+          ownershipProductText: "Digitalni proizvod, sajt ili aplikacija u tvom vlasništvu.",
+          ownershipRightsTitle: "Puna prava",
+          ownershipRightsText: "Potpuna kontrola i sva prava intelektualne svojine.",
+          ownershipStandaloneTitle: "Samostalan projekat",
+          ownershipStandaloneText: "Bez trajne podele prihoda — jedan projekat, jedno plaćanje.",
           audienceEyebrow: "SA KIM SARAĐUJEMO",
           audienceTitle: "Imaš potrebu.<br><span>Hajde da nađemo rešenje.</span>",
           audienceCreatorsTitle: "Kreatori",
@@ -461,7 +570,7 @@
           heroEyebrow: "ESTRATEGIA · CONTENIDO · CRECIMIENTO",
           heroTitle: "Tus conocimientos.<br><span>Un producto que</span><br><span>vende.</span>",
           heroIntro: "Ayudamos a creadores y a quienes necesitan productos digitales, sitios web o aplicaciones, desde la planificación hasta la entrega.",
-          heroCta: "Cuéntanos qué necesitas",
+          heroCta: "Solicita tu plaza",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Necesito%20un%20producto%20digital%2C%20sitio%20web%20o%20aplicaci%C3%B3n",
           exploreServices: "Descubre nuestros servicios",
           heroNote: "Para creadores con audiencia y empresas listas para dar el siguiente paso.",
@@ -474,20 +583,47 @@
           tickerWebsites: "Sitios web y aplicaciones",
           tickerGrowth: "Lanzamiento y crecimiento",
           servicesEyebrow: "LO QUE HACEMOS",
-          servicesTitle: "De conocimientos valiosos<br>a <span>un producto excepcional.</span>",
+          servicesTitle: "Lo que obtienes de nosotros",
           servicesSummary: "Desde productos digitales hasta sitios web y aplicaciones: encontramos contigo la solución adecuada.",
           serviceProductsTitle: "Productos digitales",
-          serviceProductsText: "eBooks, cursos en vídeo o programas de coaching: de la estructura al contenido final.",
+          serviceProductsText: "eBooks, cursos en vídeo y programas de coaching diseñados para convertir y crecer.",
           serviceCopyTitle: "Textos de venta",
           serviceCopyText: "Páginas de venta, guiones VSL, correos y materiales que impulsan la compra.",
           serviceStrategyTitle: "Estrategia de monetización",
           serviceStrategyText: "Analizamos tu audiencia y encontramos formas de monetizar lo que ya sabes.",
-          serviceWebTitle: "Sitios web y aplicaciones",
-          serviceWebText: "Experiencias digitales que presentan tu oferta con claridad e impulsan tu crecimiento.",
+          serviceWebTitle: "Sitios web",
+          serviceWebText: "Experiencias web modernas diseñadas para convertir y hacer crecer tu marca.",
+          serviceAppsTitle: "Aplicaciones móviles",
+          serviceAppsText: "Aplicaciones para iOS, Android y multiplataforma, creadas para personas reales.",
+          partnershipTitle: "Modelo de colaboración para crecer",
+          revenueProcessTitle: "Cómo funciona el reparto de ingresos",
+          processIdea: "Tu idea",
+          processBuild: "Lo creamos",
+          processSells: "El producto se vende",
+          processShare: "Compartimos",
+          processZeroLead: "Sin inversión ni costes.",
+          processZeroText: "Solo generamos ingresos cuando se vende el producto. Las ganancias se reparten automáticamente según nuestro acuerdo a través de nuestra aplicación: sin riesgos ni costes ocultos.",
+          partnershipIncluded: "Qué incluye",
+          partnershipSetup: "Configuración de la plataforma y entrega del producto",
+          partnershipEditing: "Edición de contenido incluida",
+          partnershipScripts: "Guiones e ideas para Reels, TikTok y redes sociales",
+          partnershipLaunch: "Estrategia de lanzamiento y promoción en Stories",
+          partnershipSupport: "Atención al cliente incluida",
+          partnershipDeal: "El acuerdo",
+          partnershipDealText: "<strong>No necesitas inversión inicial.</strong> Creamos y lanzamos juntos: tu éxito es nuestro éxito. Compartir los ingresos nos permite crecer contigo desde el primer día.",
+          partnershipNoCapital: "No necesitas capital para empezar.",
           serviceLaunchTitle: "Preparación y lanzamiento",
           serviceLaunchText: "Preparamos tu producto para vender y guiamos su lanzamiento, desde un webinar hasta un piloto.",
           servicePartnershipTitle: "Alianza de crecimiento",
           servicePartnershipText: "Nos encargamos de la estrategia y la ejecución con una participación acordada en los ingresos.",
+          ownershipTitle: "Opción de propiedad total",
+          ownershipIntro: "¿Prefieres ser dueño de todo? Contrata cualquier servicio como proyecto independiente y conserva el control total.",
+          ownershipProductTitle: "Tu producto",
+          ownershipProductText: "El producto digital, sitio web o aplicación será completamente tuyo.",
+          ownershipRightsTitle: "Derechos completos",
+          ownershipRightsText: "Control total y todos los derechos de propiedad intelectual.",
+          ownershipStandaloneTitle: "Proyecto independiente",
+          ownershipStandaloneText: "Sin reparto continuo de ingresos: un proyecto, un pago.",
           audienceEyebrow: "CON QUIÉN TRABAJAMOS",
           audienceTitle: "Tienes una necesidad.<br><span>Busquemos una solución.</span>",
           audienceCreatorsTitle: "Creadores",
@@ -531,7 +667,7 @@
           heroEyebrow: "策略 · 内容 · 增长",
           heroTitle: "你的专业知识。<br><span>打造畅销</span><br><span>产品。</span>",
           heroIntro: "我们帮助创作者和有数字产品、网站或应用需求的客户，从规划到交付实现目标。",
-          heroCta: "告诉我们你的需求",
+          heroCta: "立即申请",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E6%88%91%E9%9C%80%E8%A6%81%E6%95%B0%E5%AD%97%E4%BA%A7%E5%93%81%E3%80%81%E7%BD%91%E7%AB%99%E6%88%96%E5%BA%94%E7%94%A8",
           exploreServices: "了解我们的服务",
           heroNote: "服务拥有受众的创作者，以及准备迈出下一步的企业。",
@@ -544,20 +680,47 @@
           tickerWebsites: "网站与应用",
           tickerGrowth: "上线与增长",
           servicesEyebrow: "我们的工作",
-          servicesTitle: "将专业知识<br>转化为<span>卓越产品。</span>",
+          servicesTitle: "你将从我们这里获得什么",
           servicesSummary: "从数字产品到网站和应用，我们与你一起找到合适的解决方案。",
           serviceProductsTitle: "数字产品",
-          serviceProductsText: "电子书、视频课程或辅导项目，从内容架构到最终成品。",
+          serviceProductsText: "精心打造的电子书、视频课程和辅导项目，助力转化与增长。",
           serviceCopyTitle: "销售文案",
           serviceCopyText: "销售页面、视频销售脚本、电子邮件和促进购买的营销材料。",
           serviceStrategyTitle: "变现策略",
           serviceStrategyText: "分析你的受众，找到将现有知识转化为收入的方法。",
-          serviceWebTitle: "网站与应用",
-          serviceWebText: "清晰展示你的服务并助力业务增长的数字体验。",
+          serviceWebTitle: "网站",
+          serviceWebText: "打造现代化网站体验，提升转化并推动品牌成长。",
+          serviceAppsTitle: "移动应用",
+          serviceAppsText: "面向真实用户打造的 iOS、Android 和跨平台应用。",
+          partnershipTitle: "增长合作模式",
+          revenueProcessTitle: "收入分成流程",
+          processIdea: "你的想法",
+          processBuild: "我们打造",
+          processSells: "产品销售",
+          processShare: "共同分成",
+          processZeroLead: "零投资，零成本。",
+          processZeroText: "只有产品售出后才会产生收入。收益将根据我们的约定通过应用自动分配——无风险、无隐藏费用。",
+          partnershipIncluded: "合作内容",
+          partnershipSetup: "平台搭建与产品交付",
+          partnershipEditing: "包含内容编辑",
+          partnershipScripts: "Reels、TikTok 和社交媒体脚本与开场创意",
+          partnershipLaunch: "产品发布策略与 Stories 推广",
+          partnershipSupport: "包含客户支持",
+          partnershipDeal: "合作方式",
+          partnershipDealText: "<strong>无需前期投资。</strong>我们共同打造并发布产品，你的成功就是我们的成功。收入分成让我们从第一天起就与你的增长目标保持一致。",
+          partnershipNoCapital: "开始合作无需投入资金。",
           serviceLaunchTitle: "搭建与上线",
           serviceLaunchText: "帮助产品做好销售准备，并指导发布流程，从网络研讨会到试点项目。",
           servicePartnershipTitle: "增长合作",
           servicePartnershipText: "负责策略与执行，并按约定分享销售收入。",
+          ownershipTitle: "完全所有权选项",
+          ownershipIntro: "希望完全拥有项目？可将任意服务作为独立项目购买，并享有完整控制权。",
+          ownershipProductTitle: "您的产品",
+          ownershipProductText: "数字产品、网站或应用均归您所有。",
+          ownershipRightsTitle: "完整权利",
+          ownershipRightsText: "享有完整控制权和全部知识产权。",
+          ownershipStandaloneTitle: "独立项目",
+          ownershipStandaloneText: "无需持续分成——一个项目，一次付款。",
           audienceEyebrow: "我们的服务对象",
           audienceTitle: "你有需求。<br><span>我们一起寻找解决方案。</span>",
           audienceCreatorsTitle: "创作者",
@@ -601,7 +764,7 @@
           heroEyebrow: "戦略 · コンテンツ · 成長",
           heroTitle: "あなたの知識を、<br><span>売れる</span><br><span>商品に。</span>",
           heroIntro: "デジタル商品、ウェブサイト、アプリを必要とするクリエイターや皆さまを、企画から実現までサポートします。",
-          heroCta: "ご要望をお聞かせください",
+          heroCta: "申し込む",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%95%86%E5%93%81%E3%83%BB%E3%82%B5%E3%82%A4%E3%83%88%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%9B%B8%E8%AB%87",
           exploreServices: "サービスを見る",
           heroNote: "フォロワーを持つクリエイターと、次の一歩を目指す企業のために。",
@@ -614,20 +777,47 @@
           tickerWebsites: "ウェブサイトとアプリ",
           tickerGrowth: "公開と成長",
           servicesEyebrow: "サービス内容",
-          servicesTitle: "知識を活かして<br><span>優れた商品を。</span>",
+          servicesTitle: "VAMSA Studioが提供するもの",
           servicesSummary: "デジタル商品からウェブサイト、アプリまで。最適な解決策を一緒に見つけます。",
           serviceProductsTitle: "デジタル商品",
-          serviceProductsText: "電子書籍、動画講座、コーチングプログラムを構成から完成までサポート。",
+          serviceProductsText: "成果と成長につながる電子書籍、動画講座、コーチングプログラムを制作します。",
           serviceCopyTitle: "セールスコピー",
           serviceCopyText: "販売ページ、動画セールス台本、メールなど、購入につながるコンテンツ。",
           serviceStrategyTitle: "収益化戦略",
           serviceStrategyText: "あなたのオーディエンスを分析し、今ある知識を収益につなげる方法を探します。",
-          serviceWebTitle: "ウェブサイトとアプリ",
-          serviceWebText: "サービスの魅力を伝え、成長を支えるデジタル体験を設計します。",
+          serviceWebTitle: "ウェブサイト",
+          serviceWebText: "成果につながり、ブランドの成長を支えるモダンなウェブサイトを制作します。",
+          serviceAppsTitle: "モバイルアプリ",
+          serviceAppsText: "実際のユーザーのために開発するiOS、Android、クロスプラットフォームアプリ。",
+          partnershipTitle: "成長パートナーシップモデル",
+          revenueProcessTitle: "収益分配の流れ",
+          processIdea: "あなたのアイデア",
+          processBuild: "私たちが制作",
+          processSells: "商品が売れる",
+          processShare: "収益を分配",
+          processZeroLead: "初期投資・費用はゼロ。",
+          processZeroText: "商品が売れた場合にのみ収益が発生します。合意した内容に基づき、収益はアプリを通じて自動で分配されます。リスクや隠れた費用はありません。",
+          partnershipIncluded: "提供内容",
+          partnershipSetup: "プラットフォーム設定と商品の納品",
+          partnershipEditing: "コンテンツ編集込み",
+          partnershipScripts: "Reels、TikTok、SNS向けの台本とフック",
+          partnershipLaunch: "商品ローンチ戦略とStoriesでのプロモーション",
+          partnershipSupport: "カスタマーサポート込み",
+          partnershipDeal: "契約内容",
+          partnershipDealText: "<strong>初期投資は不要です。</strong>一緒に制作し、ローンチします。あなたの成功が私たちの成功です。収益分配により、初日からあなたの成長と同じ目標に向かって取り組みます。",
+          partnershipNoCapital: "開始時の資金は必要ありません。",
           serviceLaunchTitle: "準備とローンチ",
           serviceLaunchText: "商品を販売できる状態に整え、ウェビナーから試験運用まで公開をサポート。",
           servicePartnershipTitle: "成長パートナーシップ",
           servicePartnershipText: "戦略と実行を担い、合意した売上を分配するパートナーシップ。",
+          ownershipTitle: "完全所有権オプション",
+          ownershipIntro: "すべてを自分のものにしたい方へ。サービスを単独プロジェクトとして購入し、完全な管理権を持てます。",
+          ownershipProductTitle: "あなたの商品",
+          ownershipProductText: "デジタル商品、ウェブサイト、アプリを完全に所有できます。",
+          ownershipRightsTitle: "すべての権利",
+          ownershipRightsText: "完全な管理権と知的財産権を取得できます。",
+          ownershipStandaloneTitle: "単独プロジェクト",
+          ownershipStandaloneText: "継続的な収益分配なし。1つのプロジェクトに1回のお支払い。",
           audienceEyebrow: "こんな方をサポートします",
           audienceTitle: "課題があるなら、<br><span>一緒に解決しましょう。</span>",
           audienceCreatorsTitle: "クリエイター",
@@ -671,7 +861,7 @@
           heroEyebrow: "रणनीति · कंटेंट · विकास",
           heroTitle: "आपका ज्ञान।<br><span>एक ऐसा उत्पाद</span><br><span>जो बिके।</span>",
           heroIntro: "हम क्रिएटर्स और डिजिटल उत्पाद, वेबसाइट या ऐप चाहने वाले सभी लोगों की योजना से लेकर निर्माण तक मदद करते हैं।",
-          heroCta: "बताएँ आपको क्या चाहिए",
+          heroCta: "आवेदन करें",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=%E0%A4%A1%E0%A4%BF%E0%A4%9C%E0%A4%BF%E0%A4%9F%E0%A4%B2%20%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%2C%20%E0%A4%B5%E0%A5%87%E0%A4%AC%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9F%20%E0%A4%AF%E0%A4%BE%20%E0%A4%90%E0%A4%AA",
           exploreServices: "हमारी सेवाएँ देखें",
           heroNote: "ऑडियंस वाले क्रिएटर्स और अगले कदम के लिए तैयार व्यवसायों हेतु।",
@@ -684,20 +874,47 @@
           tickerWebsites: "वेबसाइट और ऐप",
           tickerGrowth: "लॉन्च और विकास",
           servicesEyebrow: "हम क्या करते हैं",
-          servicesTitle: "कीमती ज्ञान से<br><span>बेहतरीन उत्पाद तक।</span>",
+          servicesTitle: "आपको हमसे क्या मिलता है",
           servicesSummary: "डिजिटल उत्पादों, वेबसाइट और ऐप के लिए हम आपके साथ मिलकर सही समाधान तैयार करते हैं।",
           serviceProductsTitle: "डिजिटल उत्पाद",
-          serviceProductsText: "ई-बुक, वीडियो कोर्स और कोचिंग प्रोग्राम, शुरुआती रूपरेखा से तैयार कंटेंट तक।",
+          serviceProductsText: "परिणाम और विकास के लिए बनाए गए ई-बुक, वीडियो कोर्स और कोचिंग प्रोग्राम।",
           serviceCopyTitle: "सेल्स कॉपी",
           serviceCopyText: "सेल्स पेज, VSL स्क्रिप्ट, ईमेल और खरीद को बढ़ावा देने वाली सामग्री।",
           serviceStrategyTitle: "मॉनेटाइज़ेशन रणनीति",
           serviceStrategyText: "हम आपकी ऑडियंस को समझकर आपके ज्ञान से कमाई के तरीके खोजते हैं।",
-          serviceWebTitle: "वेबसाइट और ऐप",
-          serviceWebText: "ऐसे डिजिटल अनुभव जो आपकी पेशकश को स्पष्ट करें और विकास में मदद करें।",
+          serviceWebTitle: "वेबसाइट",
+          serviceWebText: "आपके ब्रांड को आगे बढ़ाने के लिए बनाए गए आधुनिक और प्रभावी वेबसाइट अनुभव।",
+          serviceAppsTitle: "मोबाइल ऐप",
+          serviceAppsText: "असली उपयोगकर्ताओं के लिए बनाए गए iOS, Android और क्रॉस-प्लेटफ़ॉर्म ऐप।",
+          partnershipTitle: "ग्रोथ पार्टनरशिप मॉडल",
+          revenueProcessTitle: "रेवेन्यू शेयर की प्रक्रिया",
+          processIdea: "आपका विचार",
+          processBuild: "हम बनाते हैं",
+          processSells: "उत्पाद बिकता है",
+          processShare: "हम साझा करते हैं",
+          processZeroLead: "कोई निवेश नहीं, कोई लागत नहीं।",
+          processZeroText: "कमाई तभी होती है जब उत्पाद बिकता है। हमारी सहमति के अनुसार कमाई ऐप के ज़रिए अपने-आप बाँटी जाती है — कोई जोखिम या छिपी फीस नहीं।",
+          partnershipIncluded: "इसमें शामिल",
+          partnershipSetup: "प्लेटफ़ॉर्म सेटअप और उत्पाद डिलीवरी",
+          partnershipEditing: "कंटेंट एडिटिंग शामिल",
+          partnershipScripts: "Reels, TikTok और सोशल मीडिया के लिए स्क्रिप्ट और हुक",
+          partnershipLaunch: "उत्पाद लॉन्च रणनीति और Stories प्रमोशन",
+          partnershipSupport: "ग्राहक सहायता शामिल",
+          partnershipDeal: "साझेदारी",
+          partnershipDealText: "<strong>शुरुआत में कोई निवेश ज़रूरी नहीं।</strong> हम साथ मिलकर बनाते और लॉन्च करते हैं — आपकी सफलता हमारी सफलता है। रेवेन्यू शेयर से पहले दिन से ही आपका विकास हमारा साझा लक्ष्य बनता है।",
+          partnershipNoCapital: "शुरू करने के लिए पूँजी की ज़रूरत नहीं।",
           serviceLaunchTitle: "सेटअप और लॉन्च",
           serviceLaunchText: "उत्पाद को बिक्री के लिए तैयार करके वेबिनार से पायलट तक लॉन्च में मदद करते हैं।",
           servicePartnershipTitle: "ग्रोथ पार्टनरशिप",
           servicePartnershipText: "रणनीति और क्रियान्वयन की जिम्मेदारी, बिक्री से तयशुदा राजस्व हिस्सेदारी के साथ।",
+          ownershipTitle: "पूर्ण स्वामित्व का विकल्प",
+          ownershipIntro: "सब कुछ अपना रखना चाहते हैं? किसी भी सेवा को अलग प्रोजेक्ट के रूप में लें और पूरा नियंत्रण अपने पास रखें।",
+          ownershipProductTitle: "आपका उत्पाद",
+          ownershipProductText: "डिजिटल उत्पाद, वेबसाइट या ऐप का पूरा स्वामित्व आपका होगा।",
+          ownershipRightsTitle: "पूरे अधिकार",
+          ownershipRightsText: "पूरा नियंत्रण और सभी बौद्धिक संपदा अधिकार।",
+          ownershipStandaloneTitle: "अलग प्रोजेक्ट",
+          ownershipStandaloneText: "लगातार कमाई साझा नहीं होगी — एक प्रोजेक्ट, एक भुगतान।",
           audienceEyebrow: "हम किनके साथ काम करते हैं",
           audienceTitle: "आपकी ज़रूरत है।<br><span>आइए समाधान खोजें।</span>",
           audienceCreatorsTitle: "क्रिएटर्स",
@@ -741,7 +958,7 @@
           heroEyebrow: "STRATEGIA · CONTENUTI · CRESCITA",
           heroTitle: "Le tue conoscenze.<br><span>Un prodotto che</span><br><span>vende.</span>",
           heroIntro: "Aiutiamo creator e chiunque abbia bisogno di prodotti digitali, siti web o app, dalla pianificazione alla realizzazione.",
-          heroCta: "Raccontaci di cosa hai bisogno",
+          heroCta: "Candidati",
           heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Mi%20serve%20un%20prodotto%20digitale%2C%20un%20sito%20web%20o%20un%27app",
           exploreServices: "Scopri i nostri servizi",
           heroNote: "Per creator con un pubblico e aziende pronte a fare il prossimo passo.",
@@ -754,20 +971,47 @@
           tickerWebsites: "Siti web e app",
           tickerGrowth: "Lancio e crescita",
           servicesEyebrow: "COSA FACCIAMO",
-          servicesTitle: "Dalle conoscenze di valore<br>a <span>un prodotto eccellente.</span>",
+          servicesTitle: "Cosa ottieni da noi",
           servicesSummary: "Dai prodotti digitali ai siti web e alle app: troviamo insieme la soluzione giusta.",
           serviceProductsTitle: "Prodotti digitali",
-          serviceProductsText: "eBook, corsi video o programmi di coaching: dalla struttura ai contenuti finali.",
+          serviceProductsText: "eBook, corsi video e programmi di coaching creati per convertire e crescere.",
           serviceCopyTitle: "Testi di vendita",
           serviceCopyText: "Pagine di vendita, script VSL, email e materiali che favoriscono l'acquisto.",
           serviceStrategyTitle: "Strategia di monetizzazione",
           serviceStrategyText: "Analizziamo il tuo pubblico e troviamo come monetizzare ciò che già sai.",
-          serviceWebTitle: "Siti web e app",
-          serviceWebText: "Esperienze digitali pensate per presentare chiaramente la tua offerta e sostenere la crescita.",
+          serviceWebTitle: "Siti web",
+          serviceWebText: "Esperienze web moderne, pensate per convertire e far crescere il tuo brand.",
+          serviceAppsTitle: "App mobile",
+          serviceAppsText: "Applicazioni iOS, Android e multipiattaforma create per persone reali.",
+          partnershipTitle: "Modello di partnership per la crescita",
+          revenueProcessTitle: "Come funziona la condivisione dei ricavi",
+          processIdea: "La tua idea",
+          processBuild: "Lo realizziamo",
+          processSells: "Il prodotto vende",
+          processShare: "Condividiamo",
+          processZeroLead: "Nessun investimento, nessun costo.",
+          processZeroText: "I ricavi arrivano solo quando il prodotto viene venduto. Gli utili vengono suddivisi automaticamente tramite la nostra app, secondo gli accordi: nessun rischio né costo nascosto.",
+          partnershipIncluded: "Cosa è incluso",
+          partnershipSetup: "Configurazione della piattaforma e consegna del prodotto",
+          partnershipEditing: "Editing dei contenuti incluso",
+          partnershipScripts: "Script e hook per Reels, TikTok e social",
+          partnershipLaunch: "Strategia di lancio e promozione nelle Stories",
+          partnershipSupport: "Assistenza clienti inclusa",
+          partnershipDeal: "L'accordo",
+          partnershipDealText: "<strong>Nessun investimento iniziale richiesto.</strong> Creiamo e lanciamo insieme: il tuo successo è il nostro successo. La condivisione dei ricavi ci allinea alla tua crescita fin dal primo giorno.",
+          partnershipNoCapital: "Non serve capitale per iniziare.",
           serviceLaunchTitle: "Preparazione e lancio",
           serviceLaunchText: "Prepariamo il prodotto per la vendita e ti accompagniamo nel lancio, dal webinar al progetto pilota.",
           servicePartnershipTitle: "Partnership per la crescita",
           servicePartnershipText: "Ci occupiamo di strategia e realizzazione, con una quota concordata sui ricavi di vendita.",
+          ownershipTitle: "Opzione di proprietà completa",
+          ownershipIntro: "Preferisci possedere tutto? Scegli qualsiasi servizio come progetto autonomo e mantieni il pieno controllo.",
+          ownershipProductTitle: "Il tuo prodotto",
+          ownershipProductText: "Il prodotto digitale, il sito web o l'app saranno interamente tuoi.",
+          ownershipRightsTitle: "Pieni diritti",
+          ownershipRightsText: "Controllo completo e tutti i diritti di proprietà intellettuale.",
+          ownershipStandaloneTitle: "Progetto autonomo",
+          ownershipStandaloneText: "Nessuna condivisione continuativa dei ricavi: un progetto, un pagamento.",
           audienceEyebrow: "CON CHI LAVORIAMO",
           audienceTitle: "Hai un'esigenza.<br><span>Troviamo una soluzione.</span>",
           audienceCreatorsTitle: "Creator",
@@ -796,6 +1040,386 @@
           footerHome: "VAMSA Studio, torna all'inizio",
           footerTagline: "Idee che diventano prodotti.",
           socialLinks: "Segui VAMSA Studio"
+        },
+        fr: {
+          metaDescription: "VAMSA Studio aide les créateurs et les entreprises à transformer leur expertise en produits numériques qui se vendent, de l'idée au lancement.",
+          pageTitle: "VAMSA Studio | De l'idée au lancement",
+          mainNavigation: "Navigation principale",
+          navServices: "Services",
+          navAbout: "À propos",
+          navTeam: "Équipe",
+          navContact: "Parlons-en",
+          languageSelector: "Choisir la langue",
+          themeToLight: "Activer le mode clair",
+          themeToDark: "Activer le mode sombre",
+          heroTitle: "Votre savoir-faire.<br><span>Un produit qui</span><br><span>se vend.</span>",
+          heroIntro: "Nous aidons les créateurs et les entreprises à concrétiser leurs produits numériques, sites web et applications, de la planification à la livraison.",
+          heroCta: "Postulez",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app",
+          exploreServices: "Découvrir nos services",
+          heroImageAlt: "VAMSA Studio, un studio créatif moderne avec un logo doré",
+          imageCaptionTitle: "De l'idée au lancement",
+          imageCaptionText: "Une équipe. Tout le processus.",
+          tickerLabel: "Notre approche",
+          tickerProducts: "Produits numériques",
+          tickerCopy: "Textes de vente",
+          tickerWebsites: "Sites web et applications",
+          tickerGrowth: "Lancement et croissance",
+          servicesEyebrow: "CE QUE NOUS FAISONS",
+          servicesTitle: "Ce que nous vous apportons",
+          servicesSummary: "Nous créons des produits numériques, des sites web et des applications, en trouvant avec vous la solution adaptée.",
+          serviceProductsTitle: "Produits numériques",
+          serviceProductsText: "Livres numériques, formations vidéo et programmes de coaching conçus pour convertir et se développer.",
+          serviceCopyTitle: "Textes de vente",
+          serviceCopyText: "Pages de vente, scripts VSL, e-mails et contenus qui incitent à l'achat.",
+          serviceStrategyTitle: "Stratégie de monétisation",
+          serviceStrategyText: "Nous analysons votre audience et trouvons comment valoriser ce que vous savez déjà.",
+          serviceWebTitle: "Sites web",
+          serviceWebText: "Des expériences web modernes conçues pour convertir et développer votre marque.",
+          serviceAppsTitle: "Applications mobiles",
+          serviceAppsText: "Des applications iOS, Android et multiplateformes conçues pour de vrais utilisateurs.",
+          partnershipTitle: "Modèle de partenariat de croissance",
+          revenueProcessTitle: "Le partage des revenus, étape par étape",
+          processIdea: "Votre idée",
+          processBuild: "Nous réalisons",
+          processSells: "Le produit se vend",
+          processShare: "Nous partageons",
+          processZeroLead: "Aucun investissement, aucun frais.",
+          processZeroText: "Les revenus sont générés uniquement lorsque le produit se vend. Les gains sont automatiquement répartis selon notre accord via notre application — sans risque ni frais cachés.",
+          partnershipIncluded: "Ce qui est inclus",
+          partnershipSetup: "Configuration de la plateforme et livraison du produit",
+          partnershipEditing: "Retouche du contenu incluse",
+          partnershipScripts: "Scripts et accroches pour Reels, TikTok et les réseaux sociaux",
+          partnershipLaunch: "Stratégie de lancement et promotion en Stories",
+          partnershipSupport: "Service client inclus",
+          partnershipDeal: "Le partenariat",
+          partnershipDealText: "<strong>Aucun investissement initial n'est nécessaire.</strong> Nous créons et lançons ensemble : votre réussite est la nôtre. Le partage des revenus aligne nos objectifs sur votre croissance dès le premier jour.",
+          partnershipNoCapital: "Aucun capital nécessaire pour démarrer.",
+          serviceLaunchTitle: "Préparation et lancement",
+          serviceLaunchText: "Nous préparons votre produit à la vente et accompagnons son lancement, du webinaire au projet pilote.",
+          servicePartnershipTitle: "Partenariat de croissance",
+          servicePartnershipText: "Nous prenons en charge la stratégie et sa mise en œuvre, avec une part des ventes convenue ensemble.",
+          ownershipTitle: "Option de propriété complète",
+          ownershipIntro: "Vous préférez tout posséder ? Choisissez n'importe quel service comme projet indépendant et gardez le contrôle total.",
+          ownershipProductTitle: "Votre produit",
+          ownershipProductText: "Le produit numérique, le site web ou l'application vous appartiendra entièrement.",
+          ownershipRightsTitle: "Droits complets",
+          ownershipRightsText: "Contrôle total et pleine propriété intellectuelle.",
+          ownershipStandaloneTitle: "Projet indépendant",
+          ownershipStandaloneText: "Aucun partage continu des revenus : un projet, un paiement.",
+          audienceEyebrow: "AVEC QUI NOUS TRAVAILLONS",
+          audienceTitle: "Vous avez un besoin.<br><span>Ensemble, trouvons une solution.</span>",
+          audienceCreatorsTitle: "Créateurs",
+          audienceCreatorsText: "Vous avez déjà une audience, mais manquez de temps ou d'expertise pour créer et vendre votre produit.",
+          audienceDigitalTitle: "Toute personne ayant besoin d'une solution numérique",
+          audienceDigitalText: "Besoin d'un produit numérique, d'un site web ou d'une application ? Nous vous aidons à concrétiser votre idée.",
+          aboutEyebrow: "DÉCOUVREZ VAMSA STUDIO",
+          aboutTitle: "Expertise, attention et <span>approche professionnelle.</span>",
+          aboutTextOne: "VAMSA Studio associe stratégie, créativité et réalisation pour créer des solutions numériques adaptées à vos objectifs. Nous avons terminé Monetise, un programme professionnel consacré aux produits numériques et aux opérations de croissance, et appliquons les systèmes et méthodes de Consulting.com, fondé par Iman Gadzhi, dont nous avons également suivi le programme.",
+          aboutTextTwo: "Nous abordons chaque projet avec professionnalisme, une communication claire, une planification réfléchie et un engagement à livrer. De la stratégie au lancement, nous travaillons à vos côtés et adaptons chaque étape à vos besoins.",
+          certificateEyebrow: "FORMATION TERMINÉE",
+          certificateLink: "Voir le certificat",
+          certificateTitle: "Certificat Monetise original, présenté sans modification",
+          certificateNote: "Aperçu du certificat. Ouvrez le PDF original pour le consulter.",
+          certificateGalleryTitle: "Certificats de l'équipe",
+          certificateGalleryNote: "Sélectionnez une image pour ouvrir le PDF original.",
+          aboutLink: "Faisons connaissance",
+          teamEyebrow: "LES PERSONNES DERRIÈRE LE PROCESSUS",
+          teamTitle: "Petite équipe.<br><span>Grandes idées.</span>",
+          teamSummary: "Quatre personnes, des talents variés et un objectif commun : nous concentrer sur ce qui fonctionne vraiment.",
+          teamOwnerRole: "Fondateurs · VAMSA Studio",
+          contactEyebrow: "VOTRE PROCHAINE ÉTAPE",
+          contactTitle: "De quoi avez-vous<br><span>besoin ?</span>",
+          contactText: "Vous avez besoin d'un produit numérique, d'un site web, d'une application, d'aide au lancement ou de conseils pour développer votre audience ? Contactez-nous. Nous vous dirons honnêtement comment nous pouvons vous aider.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea",
+          footerHome: "VAMSA Studio, retour en haut",
+          footerTagline: "Des idées qui deviennent des produits.",
+          socialLinks: "Suivre VAMSA Studio"
+        },
+        de: {
+          metaDescription: "VAMSA Studio hilft Kreativen und Unternehmen, ihr Wissen von der Idee bis zum Launch in erfolgreiche digitale Produkte zu verwandeln.",
+          pageTitle: "VAMSA Studio | Von der Idee bis zum Launch",
+          mainNavigation: "Hauptnavigation",
+          navServices: "Leistungen",
+          navAbout: "Über uns",
+          navTeam: "Team",
+          navContact: "Sprechen wir",
+          languageSelector: "Sprache auswählen",
+          themeToLight: "Helles Design aktivieren",
+          themeToDark: "Dunkles Design aktivieren",
+          heroTitle: "Dein Wissen.<br><span>Ein Produkt,</span><br><span>das sich verkauft.</span>",
+          heroIntro: "Wir helfen Kreativen und Unternehmen, digitale Produkte, Websites und Apps von der Planung bis zur Umsetzung zu realisieren.",
+          heroCta: "Jetzt bewerben",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app",
+          exploreServices: "Unsere Leistungen entdecken",
+          heroImageAlt: "VAMSA Studio, ein modernes Kreativstudio mit goldenem Logo",
+          imageCaptionTitle: "Von der Idee bis zum Launch",
+          imageCaptionText: "Ein Team. Der ganze Prozess.",
+          tickerLabel: "Unser Ansatz",
+          tickerProducts: "Digitale Produkte",
+          tickerCopy: "Verkaufstexte",
+          tickerWebsites: "Websites und Apps",
+          tickerGrowth: "Launch und Wachstum",
+          servicesEyebrow: "WAS WIR TUN",
+          servicesTitle: "Das bekommst du von uns",
+          servicesSummary: "Wir entwickeln digitale Produkte, Websites und Apps und finden gemeinsam mit dir die passende Lösung.",
+          serviceProductsTitle: "Digitale Produkte",
+          serviceProductsText: "E-Books, Videokurse und Coaching-Programme, entwickelt für bessere Ergebnisse und Wachstum.",
+          serviceCopyTitle: "Verkaufstexte",
+          serviceCopyText: "Verkaufsseiten, VSL-Skripte, E-Mails und Inhalte, die zum Kauf führen.",
+          serviceStrategyTitle: "Monetarisierungsstrategie",
+          serviceStrategyText: "Wir analysieren deine Zielgruppe und finden Wege, dein vorhandenes Wissen zu monetarisieren.",
+          serviceWebTitle: "Websites",
+          serviceWebText: "Moderne Web-Erlebnisse, die deine Marke wachsen lassen und mehr Kunden gewinnen.",
+          serviceAppsTitle: "Mobile Apps",
+          serviceAppsText: "iOS-, Android- und plattformübergreifende Apps für echte Nutzer.",
+          partnershipTitle: "Wachstumspartnerschaftsmodell",
+          revenueProcessTitle: "So funktioniert die Umsatzbeteiligung",
+          processIdea: "Deine Idee",
+          processBuild: "Wir entwickeln",
+          processSells: "Das Produkt verkauft sich",
+          processShare: "Wir teilen",
+          processZeroLead: "Keine Investition, keine Kosten.",
+          processZeroText: "Umsatz entsteht erst, wenn sich das Produkt verkauft. Die Einnahmen werden gemäß unserer Vereinbarung automatisch über unsere App aufgeteilt — ohne Risiko und versteckte Gebühren.",
+          partnershipIncluded: "Das ist enthalten",
+          partnershipSetup: "Plattform einrichten und Produkt bereitstellen",
+          partnershipEditing: "Content-Bearbeitung inklusive",
+          partnershipScripts: "Skripte und Hooks für Reels, TikToks und Social Media",
+          partnershipLaunch: "Produkt-Launch-Strategie und Stories-Promotion",
+          partnershipSupport: "Kundensupport inklusive",
+          partnershipDeal: "Die Vereinbarung",
+          partnershipDealText: "<strong>Keine Anfangsinvestition erforderlich.</strong> Wir entwickeln und launchen gemeinsam — dein Erfolg ist unser Erfolg. Durch die Umsatzbeteiligung verfolgen wir vom ersten Tag an dieselben Wachstumsziele.",
+          partnershipNoCapital: "Zum Start ist kein Kapital nötig.",
+          serviceLaunchTitle: "Vorbereitung und Launch",
+          serviceLaunchText: "Wir machen dein Produkt verkaufsbereit und begleiten den Launch – vom Webinar bis zum Pilotprojekt.",
+          servicePartnershipTitle: "Wachstumspartnerschaft",
+          servicePartnershipText: "Wir übernehmen Strategie und Umsetzung und vereinbaren gemeinsam eine Beteiligung am Umsatz.",
+          ownershipTitle: "Option für vollständiges Eigentum",
+          ownershipIntro: "Du möchtest alles selbst besitzen? Buche jede Leistung als Einzelprojekt und behalte die volle Kontrolle.",
+          ownershipProductTitle: "Dein Produkt",
+          ownershipProductText: "Das digitale Produkt, die Website oder App gehört vollständig dir.",
+          ownershipRightsTitle: "Volle Rechte",
+          ownershipRightsText: "Volle Kontrolle und sämtliche geistigen Eigentumsrechte.",
+          ownershipStandaloneTitle: "Einzelprojekt",
+          ownershipStandaloneText: "Keine laufende Umsatzbeteiligung — ein Projekt, eine Zahlung.",
+          audienceEyebrow: "MIT WEM WIR ARBEITEN",
+          audienceTitle: "Du hast einen Bedarf.<br><span>Wir finden eine Lösung.</span>",
+          audienceCreatorsTitle: "Kreative",
+          audienceCreatorsText: "Du hast bereits eine Zielgruppe, aber nicht die Zeit oder das Fachwissen, um dein Produkt zu entwickeln und zu verkaufen.",
+          audienceDigitalTitle: "Für alle mit Bedarf an einer digitalen Lösung",
+          audienceDigitalText: "Du brauchst ein digitales Produkt, eine Website oder App? Wir helfen dir, deine Idee auszuarbeiten und umzusetzen.",
+          aboutEyebrow: "LERN VAMSA STUDIO KENNEN",
+          aboutTitle: "Wissen, Sorgfalt und <span>professionelles Vorgehen.</span>",
+          aboutTextOne: "VAMSA Studio verbindet Strategie, Kreativität und Umsetzung, um digitale Lösungen für deine Ziele zu entwickeln. Wir haben Monetise, ein professionelles Programm für digitale Produkte und Wachstumsprozesse, abgeschlossen und arbeiten mit den Systemen und Methoden von Consulting.com, gegründet von Iman Gadzhi, dessen Programm wir ebenfalls absolviert haben.",
+          aboutTextTwo: "Wir gehen jedes Projekt professionell an – mit klarer Kommunikation, durchdachter Planung und dem Anspruch, zuverlässig zu liefern. Von der Strategie bis zum Launch arbeiten wir mit dir zusammen und richten jeden Schritt an deinen Bedürfnissen aus.",
+          certificateEyebrow: "AUSBILDUNG ABGESCHLOSSEN",
+          certificateLink: "Zertifikat ansehen",
+          certificateTitle: "Originales Monetise-Zertifikat, unverändert dargestellt",
+          certificateNote: "Vorschau des Zertifikats. Öffne das Original-PDF, um es anzusehen.",
+          certificateGalleryTitle: "Teamzertifikate",
+          certificateGalleryNote: "Wähle ein Bild aus, um das Original-PDF zu öffnen.",
+          aboutLink: "Lern uns kennen",
+          teamEyebrow: "DIE MENSCHEN HINTER DEM PROZESS",
+          teamTitle: "Kleines Team.<br><span>Große Ideen.</span>",
+          teamSummary: "Vier Köpfe, vielfältige Talente und ein gemeinsamer Fokus auf das, was wirklich funktioniert.",
+          teamOwnerRole: "Gründer · VAMSA Studio",
+          contactEyebrow: "DEIN NÄCHSTER SCHRITT",
+          contactTitle: "Was brauchst<br><span>du?</span>",
+          contactText: "Du brauchst ein digitales Produkt, eine Website, App, Unterstützung beim Launch oder Beratung zum Wachstum deiner Zielgruppe? Melde dich bei uns. Wir sagen dir ehrlich, wie wir helfen können.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea",
+          footerHome: "VAMSA Studio, zurück nach oben",
+          footerTagline: "Ideen werden zu Produkten.",
+          socialLinks: "VAMSA Studio folgen"
+        },
+        ru: {
+          metaDescription: "VAMSA Studio помогает авторам и компаниям превращать знания в востребованные цифровые продукты — от идеи до запуска.",
+          pageTitle: "VAMSA Studio | От идеи до запуска",
+          mainNavigation: "Главная навигация",
+          navServices: "Услуги",
+          navAbout: "О нас",
+          navTeam: "Команда",
+          navContact: "Связаться",
+          languageSelector: "Выберите язык",
+          themeToLight: "Включить светлую тему",
+          themeToDark: "Включить тёмную тему",
+          heroTitle: "Ваши знания.<br><span>Продукт,</span><br><span>который продаётся.</span>",
+          heroIntro: "Помогаем авторам и компаниям создавать цифровые продукты, сайты и приложения — от планирования до запуска.",
+          heroCta: "Подать заявку",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app",
+          exploreServices: "Наши услуги",
+          heroImageAlt: "VAMSA Studio — современная креативная студия с золотым логотипом",
+          imageCaptionTitle: "От идеи до запуска",
+          imageCaptionText: "Одна команда. Весь процесс.",
+          tickerLabel: "Наш подход",
+          tickerProducts: "Цифровые продукты",
+          tickerCopy: "Продающие тексты",
+          tickerWebsites: "Сайты и приложения",
+          tickerGrowth: "Запуск и рост",
+          servicesEyebrow: "ЧЕМ МЫ ЗАНИМАЕМСЯ",
+          servicesTitle: "Что вы получите от нас",
+          servicesSummary: "Мы создаём цифровые продукты, сайты и приложения и вместе с вами находим подходящее решение.",
+          serviceProductsTitle: "Цифровые продукты",
+          serviceProductsText: "Электронные книги, видеокурсы и коучинговые программы для роста и увеличения конверсии.",
+          serviceCopyTitle: "Продающие тексты",
+          serviceCopyText: "Страницы продаж, сценарии VSL, письма и материалы, которые помогают принять решение о покупке.",
+          serviceStrategyTitle: "Стратегия монетизации",
+          serviceStrategyText: "Анализируем вашу аудиторию и находим способы монетизировать ваши знания.",
+          serviceWebTitle: "Сайты",
+          serviceWebText: "Современные сайты, которые повышают конверсию и помогают развивать ваш бренд.",
+          serviceAppsTitle: "Мобильные приложения",
+          serviceAppsText: "Приложения для iOS, Android и разных платформ, созданные для реальных пользователей.",
+          partnershipTitle: "Модель партнёрства для роста",
+          revenueProcessTitle: "Как работает разделение дохода",
+          processIdea: "Ваша идея",
+          processBuild: "Мы создаём",
+          processSells: "Продукт продаётся",
+          processShare: "Делим доход",
+          processZeroLead: "Без вложений и расходов.",
+          processZeroText: "Доход появляется только после продажи продукта. Прибыль автоматически распределяется через наше приложение согласно договорённости — без рисков и скрытых платежей.",
+          partnershipIncluded: "Что входит",
+          partnershipSetup: "Настройка платформы и подготовка продукта",
+          partnershipEditing: "Редактирование контента включено",
+          partnershipScripts: "Сценарии и хуки для Reels, TikTok и соцсетей",
+          partnershipLaunch: "Стратегия запуска продукта и продвижение в Stories",
+          partnershipSupport: "Поддержка клиентов включена",
+          partnershipDeal: "Условия партнёрства",
+          partnershipDealText: "<strong>Начальные вложения не требуются.</strong> Мы вместе создаём и запускаем продукт — ваш успех становится нашим успехом. Разделение дохода объединяет наши цели и ваш рост с первого дня.",
+          partnershipNoCapital: "Для начала капитал не нужен.",
+          serviceLaunchTitle: "Подготовка и запуск",
+          serviceLaunchText: "Готовим продукт к продажам и сопровождаем запуск — от вебинара до пилотного проекта.",
+          servicePartnershipTitle: "Партнёрство для роста",
+          servicePartnershipText: "Берём на себя стратегию и реализацию с согласованной долей от продаж.",
+          ownershipTitle: "Вариант полного владения",
+          ownershipIntro: "Хотите владеть всем самостоятельно? Закажите любую услугу как отдельный проект и сохраните полный контроль.",
+          ownershipProductTitle: "Ваш продукт",
+          ownershipProductText: "Цифровой продукт, сайт или приложение полностью принадлежат вам.",
+          ownershipRightsTitle: "Полные права",
+          ownershipRightsText: "Полный контроль и все права на интеллектуальную собственность.",
+          ownershipStandaloneTitle: "Отдельный проект",
+          ownershipStandaloneText: "Без постоянного разделения дохода — один проект, один платёж.",
+          audienceEyebrow: "С КЕМ МЫ РАБОТАЕМ",
+          audienceTitle: "У вас есть задача.<br><span>Давайте найдём решение.</span>",
+          audienceCreatorsTitle: "Авторы и создатели",
+          audienceCreatorsText: "У вас уже есть аудитория, но не хватает времени или опыта, чтобы создать и продавать свой продукт.",
+          audienceDigitalTitle: "Для всех, кому нужно цифровое решение",
+          audienceDigitalText: "Нужен цифровой продукт, сайт или приложение? Поможем развить идею и воплотить её в жизнь.",
+          aboutEyebrow: "ПОЗНАКОМЬТЕСЬ С VAMSA STUDIO",
+          aboutTitle: "Знания, внимание и <span>профессиональный подход.</span>",
+          aboutTextOne: "VAMSA Studio объединяет стратегию, творчество и реализацию, чтобы создавать цифровые решения для ваших целей. Мы прошли профессиональную программу Monetise по цифровым продуктам и развитию бизнеса, а также программу Consulting.com, основанную Иманом Гаджи, и используем её системы и подходы.",
+          aboutTextTwo: "Мы работаем над каждым проектом профессионально: обеспечиваем ясную коммуникацию, продуманное планирование и качественный результат. От стратегии до запуска мы рядом с вами и адаптируем каждый этап под ваши задачи.",
+          certificateEyebrow: "ОБУЧЕНИЕ ЗАВЕРШЕНО",
+          certificateLink: "Посмотреть сертификат",
+          certificateTitle: "Оригинальный сертификат Monetise без изменений",
+          certificateNote: "Предпросмотр сертификата. Откройте оригинальный PDF, чтобы посмотреть его.",
+          certificateGalleryTitle: "Сертификаты команды",
+          certificateGalleryNote: "Нажмите на изображение, чтобы открыть оригинальный PDF.",
+          aboutLink: "Давайте познакомимся",
+          teamEyebrow: "КОМАНДА, КОТОРАЯ ВОПЛОЩАЕТ ИДЕИ",
+          teamTitle: "Небольшая команда.<br><span>Большие идеи.</span>",
+          teamSummary: "Четыре человека, разные таланты и общее стремление сосредоточиться на том, что действительно работает.",
+          teamOwnerRole: "Основатели · VAMSA Studio",
+          contactEyebrow: "ВАШ СЛЕДУЮЩИЙ ШАГ",
+          contactTitle: "Что вам<br><span>нужно?</span>",
+          contactText: "Нужен цифровой продукт, сайт, приложение, помощь с запуском или советы по развитию аудитории? Напишите нам. Мы честно расскажем, чем можем помочь.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea",
+          footerHome: "VAMSA Studio, наверх",
+          footerTagline: "Идеи становятся продуктами.",
+          socialLinks: "Подписывайтесь на VAMSA Studio"
+        },
+        pt: {
+          metaDescription: "A VAMSA Studio ajuda criadores e empresas a transformar conhecimento em produtos digitais que vendem, da ideia ao lançamento.",
+          pageTitle: "VAMSA Studio | Da ideia ao lançamento",
+          mainNavigation: "Navegação principal",
+          navServices: "Serviços",
+          navAbout: "Sobre",
+          navTeam: "Equipa",
+          navContact: "Vamos conversar",
+          languageSelector: "Escolher idioma",
+          themeToLight: "Ativar modo claro",
+          themeToDark: "Ativar modo escuro",
+          heroTitle: "O seu conhecimento.<br><span>Um produto que</span><br><span>vende.</span>",
+          heroIntro: "Ajudamos criadores e empresas a concretizar produtos digitais, sites e aplicações, do planeamento à entrega.",
+          heroCta: "Candidate-se",
+          heroCtaHref: "mailto:vamsastudioteam@gmail.com?subject=I%20need%20a%20digital%20product%2C%20website%2C%20or%20app",
+          exploreServices: "Conheça os nossos serviços",
+          heroImageAlt: "VAMSA Studio, um estúdio criativo moderno com um logótipo dourado",
+          imageCaptionTitle: "Da ideia ao lançamento",
+          imageCaptionText: "Uma equipa. Todo o processo.",
+          tickerLabel: "A nossa abordagem",
+          tickerProducts: "Produtos digitais",
+          tickerCopy: "Textos de vendas",
+          tickerWebsites: "Sites e aplicações",
+          tickerGrowth: "Lançamento e crescimento",
+          servicesEyebrow: "O QUE FAZEMOS",
+          servicesTitle: "O que recebe de nós",
+          servicesSummary: "Criamos produtos digitais, sites e aplicações, trabalhando consigo para encontrar a solução certa.",
+          serviceProductsTitle: "Produtos digitais",
+          serviceProductsText: "eBooks, cursos em vídeo e programas de mentoria concebidos para gerar conversões e crescimento.",
+          serviceCopyTitle: "Textos de vendas",
+          serviceCopyText: "Páginas de vendas, guiões VSL, emails e materiais que ajudam a concretizar vendas.",
+          serviceStrategyTitle: "Estratégia de monetização",
+          serviceStrategyText: "Analisamos o seu público e encontramos formas de rentabilizar o conhecimento que já tem.",
+          serviceWebTitle: "Sites",
+          serviceWebText: "Experiências web modernas concebidas para converter e fazer crescer a sua marca.",
+          serviceAppsTitle: "Aplicações móveis",
+          serviceAppsText: "Aplicações para iOS, Android e várias plataformas, criadas para utilizadores reais.",
+          partnershipTitle: "Modelo de parceria para o crescimento",
+          revenueProcessTitle: "Como funciona a partilha de receitas",
+          processIdea: "A sua ideia",
+          processBuild: "Nós criamos",
+          processSells: "O produto vende",
+          processShare: "Partilhamos",
+          processZeroLead: "Sem investimento, sem custos.",
+          processZeroText: "Só há receitas quando o produto é vendido. Os ganhos são divididos automaticamente através da nossa aplicação, conforme o acordo — sem riscos nem custos ocultos.",
+          partnershipIncluded: "O que está incluído",
+          partnershipSetup: "Configuração da plataforma e entrega do produto",
+          partnershipEditing: "Edição de conteúdo incluída",
+          partnershipScripts: "Guiões e ideias para Reels, TikTok e redes sociais",
+          partnershipLaunch: "Estratégia de lançamento e promoção nas Stories",
+          partnershipSupport: "Apoio ao cliente incluído",
+          partnershipDeal: "O acordo",
+          partnershipDealText: "<strong>Não é necessário investimento inicial.</strong> Criamos e lançamos em conjunto — o seu sucesso é o nosso sucesso. A partilha de receitas alinha-nos com o seu crescimento desde o primeiro dia.",
+          partnershipNoCapital: "Não precisa de capital para começar.",
+          serviceLaunchTitle: "Preparação e lançamento",
+          serviceLaunchText: "Preparamos o seu produto para venda e acompanhamos o lançamento, de webinars a projetos-piloto.",
+          servicePartnershipTitle: "Parceria de crescimento",
+          servicePartnershipText: "Assumimos a estratégia e a execução, com uma participação nas vendas acordada em conjunto.",
+          ownershipTitle: "Opção de propriedade total",
+          ownershipIntro: "Prefere ser dono de tudo? Contrate qualquer serviço como projeto independente e mantenha o controlo total.",
+          ownershipProductTitle: "O seu produto",
+          ownershipProductText: "O produto digital, site ou aplicação será totalmente seu.",
+          ownershipRightsTitle: "Direitos totais",
+          ownershipRightsText: "Controlo total e todos os direitos de propriedade intelectual.",
+          ownershipStandaloneTitle: "Projeto independente",
+          ownershipStandaloneText: "Sem partilha contínua de receitas — um projeto, um pagamento.",
+          audienceEyebrow: "COM QUEM TRABALHAMOS",
+          audienceTitle: "Tem uma necessidade.<br><span>Vamos encontrar uma solução.</span>",
+          audienceCreatorsTitle: "Criadores",
+          audienceCreatorsText: "Já tem um público, mas falta-lhe tempo ou experiência para criar e vender o seu produto.",
+          audienceDigitalTitle: "Para quem precisa de uma solução digital",
+          audienceDigitalText: "Precisa de um produto digital, site ou aplicação? Ajudamos a desenvolver a ideia e a concretizá-la.",
+          aboutEyebrow: "CONHEÇA A VAMSA STUDIO",
+          aboutTitle: "Conhecimento, atenção e <span>uma abordagem profissional.</span>",
+          aboutTextOne: "A VAMSA Studio reúne estratégia, criatividade e execução para criar soluções digitais alinhadas com os seus objetivos. Concluímos o Monetise, um programa profissional sobre produtos digitais e operações de crescimento, e trabalhamos com os sistemas e métodos da Consulting.com, fundada por Iman Gadzhi, cujo programa também concluímos.",
+          aboutTextTwo: "Abordamos cada projeto com profissionalismo, comunicação clara, planeamento cuidadoso e compromisso com a entrega. Da estratégia ao lançamento, trabalhamos consigo e adaptamos cada etapa às suas necessidades.",
+          certificateEyebrow: "FORMAÇÃO CONCLUÍDA",
+          certificateLink: "Ver certificado",
+          certificateTitle: "Certificado original Monetise, apresentado sem alterações",
+          certificateNote: "Pré-visualização do certificado. Abra o PDF original para o consultar.",
+          certificateGalleryTitle: "Certificados da equipa",
+          certificateGalleryNote: "Selecione uma imagem para abrir o PDF original.",
+          aboutLink: "Vamos conhecer-nos",
+          teamEyebrow: "AS PESSOAS POR TRÁS DO PROCESSO",
+          teamTitle: "Equipa pequena.<br><span>Grandes ideias.</span>",
+          teamSummary: "Quatro pessoas, talentos diversos e um objetivo comum: focar no que realmente funciona.",
+          teamOwnerRole: "Fundadores · VAMSA Studio",
+          contactEyebrow: "O SEU PRÓXIMO PASSO",
+          contactTitle: "De que<br><span>precisa?</span>",
+          contactText: "Precisa de um produto digital, site, aplicação, apoio no lançamento ou orientação para crescer o seu público? Entre em contacto. Diremos com honestidade como podemos ajudar.",
+          contactCtaHref: "mailto:vamsastudioteam@gmail.com?subject=Collaboration%20idea",
+          footerHome: "VAMSA Studio, voltar ao topo",
+          footerTagline: "Ideias que se tornam produtos.",
+          socialLinks: "Siga a VAMSA Studio"
         }
       };
 
@@ -862,6 +1486,42 @@
           formMessage: "Come possiamo aiutarti?",
           formSubmit: "Prepara email",
           formNote: "Si aprirà la tua app email con il messaggio indirizzato a VAMSA Studio. Questa pagina non invia né salva i tuoi dati."
+        },
+        fr: {
+          formName: "Votre nom",
+          formEmail: "Votre adresse e-mail",
+          formWebsite: "Votre site web ou page (facultatif)",
+          formPhone: "Téléphone (facultatif)",
+          formMessage: "Comment pouvons-nous vous aider ?",
+          formSubmit: "Préparer l'e-mail",
+          formNote: "Votre application de messagerie s'ouvrira avec un message adressé à VAMSA Studio. Cette page n'envoie ni ne stocke vos données."
+        },
+        de: {
+          formName: "Dein Name",
+          formEmail: "Deine E-Mail-Adresse",
+          formWebsite: "Deine Website oder Seite (optional)",
+          formPhone: "Telefon (optional)",
+          formMessage: "Wobei können wir dir helfen?",
+          formSubmit: "E-Mail vorbereiten",
+          formNote: "Deine E-Mail-App öffnet sich mit einer Nachricht an VAMSA Studio. Diese Seite sendet oder speichert keine Daten."
+        },
+        ru: {
+          formName: "Ваше имя",
+          formEmail: "Ваш адрес электронной почты",
+          formWebsite: "Ваш сайт или страница (необязательно)",
+          formPhone: "Телефон (необязательно)",
+          formMessage: "Чем мы можем вам помочь?",
+          formSubmit: "Подготовить письмо",
+          formNote: "Откроется ваша почтовая программа с письмом для VAMSA Studio. Эта страница не отправляет и не сохраняет ваши данные."
+        },
+        pt: {
+          formName: "O seu nome",
+          formEmail: "O seu email",
+          formWebsite: "O seu site ou página (opcional)",
+          formPhone: "Telefone (opcional)",
+          formMessage: "Como podemos ajudar?",
+          formSubmit: "Preparar email",
+          formNote: "A sua aplicação de email será aberta com uma mensagem para a VAMSA Studio. Esta página não envia nem guarda os seus dados."
         }
       };
       Object.entries(formTranslations).forEach(([language, dictionary]) => {
@@ -940,6 +1600,37 @@
       document.documentElement.dataset.theme = savedTheme === "light" ? "light" : "dark";
       document.querySelector('meta[name="theme-color"]').content = document.documentElement.dataset.theme === "dark" ? "#0a0907" : "#f5eee1";
       setLanguage(savedLanguage);
+
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reducedMotion && "IntersectionObserver" in window) {
+        const revealTargets = document.querySelectorAll([
+          "#services .section-heading",
+          "#services .service-card",
+          "#partnership > .partnership-title",
+          "#partnership .revenue-process",
+          "#partnership .partnership-details",
+          "#ownership .ownership-heading",
+          "#ownership .ownership-card",
+          "#about .about-label",
+          "#about .about-copy",
+          ".team-section .team-heading",
+          ".team-section .team-card",
+          "#contact > *:not(.contact-orb)"
+        ].join(", "));
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealTargets.forEach((element) => {
+          element.setAttribute("data-scroll-reveal", "");
+          revealObserver.observe(element);
+        });
+      }
     </script>
   </body>
 </html>
