@@ -1752,7 +1752,7 @@
       const analyticsConsentBanner = document.querySelector("#analytics-consent");
       const analyticsSettingsButton = document.querySelector("#analytics-settings");
       const analyticsConsentKey = "vamsa-analytics-consent";
-      const googleTagManagerId = "GTM-KRLPHJH8";
+      const googleAnalyticsId = "G-W2CS7400XX";
       window.dataLayer = window.dataLayer || [];
       window.gtag = window.gtag || function () {
         window.dataLayer.push(arguments);
@@ -1765,18 +1765,19 @@
       });
       window.gtag("js", new Date());
 
-      const loadGoogleTagManager = () => {
-        if (window.googleTagManagerLoaded) return;
+      const loadGoogleAnalytics = () => {
+        if (window.googleAnalyticsLoaded) return;
 
-        window.googleTagManagerLoaded = true;
-        const tagManagerScript = document.createElement("script");
-        tagManagerScript.async = true;
-        tagManagerScript.src = `https://www.googletagmanager.com/gtm.js?id=${googleTagManagerId}`;
-        tagManagerScript.onerror = () => {
-          window.googleTagManagerLoaded = false;
-          console.error("Google Tag Manager could not be loaded.");
+        window.googleAnalyticsLoaded = true;
+        window.gtag("config", googleAnalyticsId);
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
+        analyticsScript.onerror = () => {
+          window.googleAnalyticsLoaded = false;
+          console.error("Google Analytics could not be loaded.");
         };
-        document.head.append(tagManagerScript);
+        document.head.append(analyticsScript);
       };
 
       const setAnalyticsConsent = (consent) => {
@@ -1787,7 +1788,7 @@
         analyticsConsentBanner.hidden = true;
 
         if (consent === "granted") {
-          loadGoogleTagManager();
+          loadGoogleAnalytics();
         }
       };
 
