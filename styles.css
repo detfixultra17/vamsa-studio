@@ -270,25 +270,19 @@ a {
   border: 0;
 }
 
-.main-nav a:not(.nav-cta):hover,
+.main-nav a:hover,
 .text-link:hover,
 .site-footer > a:not(.brand):hover {
   color: var(--accent-strong);
 }
 
-.main-nav .nav-cta {
-  padding: 12px 17px;
-  border: 1px solid var(--soft-border);
-  border-radius: 3px;
-  color: var(--ink);
-}
-
-.nav-cta span,
 .button span {
   margin-left: 9px;
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   min-height: 580px;
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -296,6 +290,20 @@ a {
   gap: 54px;
   padding-top: 26px;
   padding-bottom: 70px;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: -14% -8%;
+  background: radial-gradient(
+    ellipse at 78% 48%,
+    rgb(193 139 54 / 62%) 0%,
+    rgb(112 75 28 / 42%) 28%,
+    transparent 64%
+  );
+  content: "";
+  pointer-events: none;
 }
 
 .hero-copy {
@@ -389,6 +397,13 @@ h2 {
   color: var(--button-ink);
 }
 
+.hero-apply-button {
+  min-width: 260px;
+  min-height: 98px;
+  padding-inline: 28px;
+  font-size: 22px;
+}
+
 .text-link {
   display: inline-flex;
   gap: 10px;
@@ -401,56 +416,63 @@ h2 {
 .hero-image {
   position: relative;
   height: 445px;
-  overflow: hidden;
-  background: #333a35;
+  overflow: visible;
+  isolation: isolate;
+  background: transparent;
 }
 
-.hero-image::after {
+.hero-backdrop {
   position: absolute;
-  inset: 45% 0 0;
-  background: linear-gradient(transparent, rgb(15 22 17 / 34%));
-  content: "";
+  z-index: 0;
+  inset: -12% -14%;
   pointer-events: none;
 }
 
+.hero-backdrop-name,
+.hero-backdrop-studio {
+  position: absolute;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.hero-backdrop-name {
+  top: 17%;
+  left: 3%;
+  color: rgb(37 23 5 / 34%);
+  font-size: clamp(82px, 10.8vw, 136px);
+  letter-spacing: -0.035em;
+}
+
+.hero-backdrop-studio {
+  top: 37%;
+  left: 8%;
+  color: rgb(255 229 166 / 64%);
+  font-size: clamp(36px, 5.2vw, 64px);
+  letter-spacing: 0.2em;
+}
+
 .hero-image img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  object-position: right center;
+  transform: scale(1.22);
+  transform-origin: right center;
+  transition: opacity 400ms ease;
 }
 
-.image-caption {
-  position: absolute;
-  z-index: 1;
-  bottom: 24px;
-  left: 25px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: white;
-  font-size: 10px;
-  line-height: 1.65;
-}
-
-.image-caption strong {
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.caption-icon {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgb(255 255 255 / 54%);
-  border-radius: 50%;
-  font-size: 18px;
+.hero-image img.is-transitioning {
+  opacity: 0;
 }
 
 .image-index {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   right: 24px;
   bottom: 34px;
   color: rgb(255 255 255 / 76%);
@@ -1183,6 +1205,12 @@ h2 {
   object-fit: contain;
 }
 
+.certificate-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .certificate-gallery {
   margin: 34px 0;
 }
@@ -1192,12 +1220,6 @@ h2 {
   font-family: "DM Sans", sans-serif;
   font-size: 19px;
   font-weight: 700;
-}
-
-.certificate-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
 }
 
 .certificate-gallery-item {
@@ -1561,6 +1583,21 @@ h2 {
     font-size: clamp(43px, 6vw, 58px);
   }
 
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 16px 20px;
+  }
+
+  .hero-apply-button {
+    min-width: 220px;
+    min-height: 74px;
+    font-size: 18px;
+  }
+
+  .text-link {
+    white-space: nowrap;
+  }
+
   .hero-image {
     height: 385px;
   }
@@ -1597,6 +1634,7 @@ h2 {
   .certificate-gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 @media (max-width: 640px) {
@@ -1614,13 +1652,8 @@ h2 {
     gap: 0;
   }
 
-  .main-nav a:not(.nav-cta) {
+  .main-nav {
     display: none;
-  }
-
-  .main-nav .nav-cta {
-    padding: 10px 12px;
-    font-size: 11px;
   }
 
   .language-switch select {
@@ -1658,7 +1691,13 @@ h2 {
   }
 
   .hero-image img {
-    object-position: center 47%;
+    object-position: center;
+  }
+
+  .hero-apply-button {
+    min-width: min(100%, 240px);
+    min-height: 76px;
+    font-size: 18px;
   }
 
   .section-space {

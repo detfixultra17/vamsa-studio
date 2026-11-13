@@ -15,7 +15,7 @@
   </head>
   <body>
     <video class="ambient-background" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
-      <source src="pozanidan%20.mp4" type="video/mp4">
+      <source src="linujia.mp4" type="video/mp4">
     </video>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="VAMSA Studio home">
@@ -26,7 +26,6 @@
         <a href="#services" data-i18n="navServices">Services</a>
         <a href="#about" data-i18n="navAbout">About</a>
         <a href="#team" data-i18n="navTeam">Team</a>
-        <a class="nav-cta" href="#contact"><span data-i18n="navContact">Let's talk</span><span aria-hidden="true">↗</span></a>
       </nav>
       <div class="header-controls">
         <label class="language-switch">
@@ -61,23 +60,22 @@
             apps. We support every stage, from planning through delivery.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#contact">
+            <a class="button button-primary hero-apply-button" href="#contact">
               <span data-i18n="heroCta">Apply</span><span aria-hidden="true">↗</span>
             </a>
             <a class="text-link" href="#services"><span data-i18n="exploreServices">Explore our services</span><span aria-hidden="true">↓</span></a>
           </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" role="group" aria-label="VAMSA Studio team photos">
+          <div class="hero-backdrop" aria-hidden="true">
+            <span class="hero-backdrop-name">VAMSA</span>
+            <span class="hero-backdrop-studio">STUDIO</span>
+          </div>
           <img
-            src="vamsa-studio-hero.png"
-            alt="VAMSA Studio, a modern creative studio with a gold logo"
-            data-i18n-alt="heroImageAlt"
+            src="bis.png"
+            alt="VAMSA Studio team portrait"
             fetchpriority="high"
           >
-          <div class="image-caption">
-            <span class="caption-icon" aria-hidden="true">✳</span>
-            <span><strong data-i18n="imageCaptionTitle">From idea to launch</strong><br><span data-i18n="imageCaptionText">One team. The whole process.</span></span>
-          </div>
           <span class="image-index" aria-hidden="true">01 / 04</span>
         </div>
       </section>
@@ -252,30 +250,30 @@
               <img class="certificate-original-image" src="certificate-serttif-vamsa.jpg" alt="VAMSA Studio certificate" loading="lazy">
             </a>
             <p class="certificate-note" data-i18n="certificateNote">Certificate image preview. Open the original PDF to view it.</p>
-          </div>
-          <div class="certificate-gallery">
-            <h3 data-i18n="certificateGalleryTitle">Team certificates</h3>
-            <div class="certificate-gallery-grid">
-              <a class="certificate-gallery-item" href="cer%20m%20.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="certificate-cer-m.jpg" alt="Certificate for Maša Jevtović" loading="lazy">
-                <span>Maša Jevtović</span>
-              </a>
-              <a class="certificate-gallery-item" href="serfii%20v.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="certificate-serfii-v.jpg" alt="Certificate for Vukašin Drašković" loading="lazy">
-                <span>Vukašin Drašković</span>
-              </a>
-              <a class="certificate-gallery-item" href="sertif%20a%20.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="certificate-sertif-a.jpg" alt="Certificate for Anđela Nikolić Šćepanović" loading="lazy">
-                <span>Anđela Nikolić Šćepanović</span>
-              </a>
-              <a class="certificate-gallery-item" href="setfi%20s.pdf" target="_blank" rel="noopener noreferrer">
-                <img src="certificate-setfi-s.jpg" alt="Certificate for Stefan Drašković" loading="lazy">
-                <span>Stefan Drašković</span>
-              </a>
             </div>
-            <p class="certificate-note" data-i18n="certificateGalleryNote">Select an image to open its original PDF.</p>
-          </div>
-          <a class="text-link" href="#contact"><span data-i18n="aboutLink">Let's meet</span><span aria-hidden="true">↗</span></a>
+            <div class="certificate-gallery">
+              <h3 data-i18n="certificateGalleryTitle">Team certificates</h3>
+              <div class="certificate-gallery-grid">
+                <a class="certificate-gallery-item" href="cer%20m%20.pdf" target="_blank" rel="noopener noreferrer">
+                  <img src="certificate-cer-m.jpg" alt="Certificate for Maša Jevtović" loading="lazy">
+                  <span>Maša Jevtović</span>
+                </a>
+                <a class="certificate-gallery-item" href="serfii%20v.pdf" target="_blank" rel="noopener noreferrer">
+                  <img src="certificate-serfii-v.jpg" alt="Certificate for Vukašin Drašković" loading="lazy">
+                  <span>Vukašin Drašković</span>
+                </a>
+                <a class="certificate-gallery-item" href="sertif%20a%20.pdf" target="_blank" rel="noopener noreferrer">
+                  <img src="certificate-sertif-a.jpg" alt="Certificate for Anđela Nikolić Šćepanović" loading="lazy">
+                  <span>Anđela Nikolić Šćepanović</span>
+                </a>
+                <a class="certificate-gallery-item" href="setfi%20s.pdf" target="_blank" rel="noopener noreferrer">
+                  <img src="certificate-setfi-s.jpg" alt="Certificate for Stefan Drašković" loading="lazy">
+                  <span>Stefan Drašković</span>
+                </a>
+              </div>
+              <p class="certificate-note" data-i18n="certificateGalleryNote">Select an image to open its original PDF.</p>
+            </div>
+            <a class="text-link" href="#contact"><span data-i18n="aboutLink">Let's meet</span><span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
@@ -1602,6 +1600,29 @@
       setLanguage(savedLanguage);
 
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const heroSlides = [
+        { src: "bis.png", alt: "VAMSA Studio team portrait 1" },
+        { src: "hei.png", alt: "VAMSA Studio team portrait 2" },
+        { src: "ljam.png", alt: "VAMSA Studio team portrait 3" },
+        { src: "tis.png", alt: "VAMSA Studio team portrait 4" }
+      ];
+      const heroImage = document.querySelector(".hero-image img");
+      const heroImageIndex = document.querySelector(".image-index");
+      let activeHeroSlide = 0;
+
+      if (!reducedMotion) {
+        window.setInterval(() => {
+          heroImage.classList.add("is-transitioning");
+          window.setTimeout(() => {
+            activeHeroSlide = (activeHeroSlide + 1) % heroSlides.length;
+            heroImage.src = heroSlides[activeHeroSlide].src;
+            heroImage.alt = heroSlides[activeHeroSlide].alt;
+            heroImageIndex.textContent = `0${activeHeroSlide + 1} / 0${heroSlides.length}`;
+            heroImage.classList.remove("is-transitioning");
+          }, 400);
+        }, 5000);
+      }
+
       if (!reducedMotion && "IntersectionObserver" in window) {
         const revealTargets = document.querySelectorAll([
           "#services .section-heading",
