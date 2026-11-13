@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#0a0907">
     <link rel="canonical" href="https://vamsastudio.com/">
     <title data-i18n="pageTitle">VAMSA Studio | From Idea to Launch</title>
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css?v=8">
   </head>
   <body>
     <video class="ambient-background" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
@@ -318,7 +318,8 @@
         <p class="contact-copy" data-i18n="contactText">
           Whether you need a digital product, website, app, launch support, or guidance on growing your audience, get in touch. We will give you an honest assessment of how we can help.
         </p>
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mgakollr" method="POST">
+          <input type="hidden" name="_subject" value="New VAMSA Studio inquiry">
           <div class="contact-field">
             <label for="contact-name" data-i18n="formName">Your name</label>
             <input id="contact-name" name="name" autocomplete="name" required>
@@ -339,8 +340,8 @@
             <label for="contact-message" data-i18n="formMessage">What do you need help with?</label>
             <textarea id="contact-message" name="message" rows="4" required></textarea>
           </div>
-          <button class="button button-light" type="submit"><span data-i18n="formSubmit">Prepare email</span><span aria-hidden="true">↗</span></button>
-          <p class="contact-form-note" data-i18n="formNote">Your email app will open with your message addressed to VAMSA Studio. Nothing is sent or stored by this page.</p>
+          <button class="button button-light" type="submit"><span data-i18n="formSubmit">Send inquiry</span><span aria-hidden="true">↗</span></button>
+          <p class="contact-form-note" data-i18n="formNote" role="status" aria-live="polite">Your message will be sent securely to VAMSA Studio.</p>
         </form>
       </section>
     </main>
@@ -356,8 +357,19 @@
         <a href="https://www.instagram.com/vamsa_studio/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
         <a href="https://www.tiktok.com/@vamsastudio" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a>
       </div>
+      <button class="analytics-settings" id="analytics-settings" type="button" data-i18n="analyticsSettings">Cookie settings</button>
       <span class="copyright">© 2026 VAMSA Studio</span>
     </footer>
+    <aside class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-consent-title" hidden>
+      <div>
+        <h2 id="analytics-consent-title" data-i18n="analyticsConsentTitle">Analytics preferences</h2>
+        <p data-i18n="analyticsConsentText">Allow analytics to help us understand visits to our site. Analytics loads only if you accept. You can change this choice anytime in Cookie settings.</p>
+      </div>
+      <div class="analytics-consent-actions">
+        <button class="analytics-consent-button analytics-consent-reject" id="analytics-reject" type="button" data-i18n="analyticsReject">Reject analytics</button>
+        <button class="analytics-consent-button analytics-consent-accept" id="analytics-accept" type="button" data-i18n="analyticsAccept">Accept analytics</button>
+      </div>
+    </aside>
     <script>
       const translations = {
         en: {
@@ -1428,8 +1440,11 @@
           formWebsite: "Your website or page (optional)",
           formPhone: "Phone (optional)",
           formMessage: "What do you need help with?",
-          formSubmit: "Prepare email",
-          formNote: "Your email app will open with your message addressed to VAMSA Studio. Nothing is sent or stored by this page."
+          formSubmit: "Send inquiry",
+          formNote: "Your message will be sent securely to VAMSA Studio.",
+          formSending: "Sending your message...",
+          formSuccess: "Thanks! Your message has been sent to VAMSA Studio.",
+          formError: "We couldn't send your message. Please try again."
         },
         sr: {
           formName: "Tvoje ime",
@@ -1437,8 +1452,11 @@
           formWebsite: "Tvoj sajt ili stranica (opciono)",
           formPhone: "Telefon (opciono)",
           formMessage: "Kako možemo da ti pomognemo?",
-          formSubmit: "Pripremi email",
-          formNote: "Otvoriće se tvoja email aplikacija sa porukom za VAMSA Studio. Ova stranica ne šalje niti čuva podatke."
+          formSubmit: "Pošalji prijavu",
+          formNote: "Tvoja poruka će biti poslata VAMSA Studio timu.",
+          formSending: "Šaljemo tvoju poruku...",
+          formSuccess: "Hvala! Tvoja poruka je poslata VAMSA Studio timu.",
+          formError: "Poruka nije poslata. Pokušaj ponovo."
         },
         es: {
           formName: "Tu nombre",
@@ -1446,8 +1464,11 @@
           formWebsite: "Tu sitio web o página (opcional)",
           formPhone: "Teléfono (opcional)",
           formMessage: "¿En qué podemos ayudarte?",
-          formSubmit: "Preparar correo",
-          formNote: "Se abrirá tu aplicación de correo con el mensaje dirigido a VAMSA Studio. Esta página no envía ni almacena tus datos."
+          formSubmit: "Enviar consulta",
+          formNote: "Tu mensaje se enviará de forma segura a VAMSA Studio.",
+          formSending: "Enviando tu mensaje...",
+          formSuccess: "¡Gracias! Tu mensaje se ha enviado a VAMSA Studio.",
+          formError: "No se pudo enviar el mensaje. Inténtalo de nuevo."
         },
         zh: {
           formName: "你的姓名",
@@ -1455,8 +1476,11 @@
           formWebsite: "你的网站或页面（选填）",
           formPhone: "电话（选填）",
           formMessage: "我们可以为你提供什么帮助？",
-          formSubmit: "准备邮件",
-          formNote: "邮件应用将打开，并预填发送给 VAMSA Studio 的消息。此页面不会发送或存储你的信息。"
+          formSubmit: "发送咨询",
+          formNote: "你的消息将安全发送给 VAMSA Studio。",
+          formSending: "正在发送消息...",
+          formSuccess: "感谢！你的消息已发送给 VAMSA Studio。",
+          formError: "消息发送失败，请重试。"
         },
         ja: {
           formName: "お名前",
@@ -1464,8 +1488,11 @@
           formWebsite: "ウェブサイトまたはページ（任意）",
           formPhone: "電話番号（任意）",
           formMessage: "ご相談内容",
-          formSubmit: "メールを作成",
-          formNote: "VAMSA Studio宛てのメッセージを入力した状態でメールアプリが開きます。このページで情報が送信・保存されることはありません。"
+          formSubmit: "お問い合わせを送信",
+          formNote: "メッセージはVAMSA Studioに安全に送信されます。",
+          formSending: "メッセージを送信中...",
+          formSuccess: "ありがとうございます。メッセージをVAMSA Studioに送信しました。",
+          formError: "メッセージを送信できませんでした。もう一度お試しください。"
         },
         hi: {
           formName: "आपका नाम",
@@ -1473,8 +1500,11 @@
           formWebsite: "आपकी वेबसाइट या पेज (वैकल्पिक)",
           formPhone: "फ़ोन (वैकल्पिक)",
           formMessage: "हम आपकी किस तरह मदद कर सकते हैं?",
-          formSubmit: "ईमेल तैयार करें",
-          formNote: "VAMSA Studio को संबोधित संदेश के साथ आपका ईमेल ऐप खुलेगा। यह पेज आपका डेटा न भेजता है, न सहेजता है।"
+          formSubmit: "पूछताछ भेजें",
+          formNote: "आपका संदेश सुरक्षित रूप से VAMSA Studio को भेजा जाएगा।",
+          formSending: "आपका संदेश भेजा जा रहा है...",
+          formSuccess: "धन्यवाद! आपका संदेश VAMSA Studio को भेज दिया गया है।",
+          formError: "संदेश नहीं भेजा जा सका। कृपया फिर से कोशिश करें।"
         },
         it: {
           formName: "Il tuo nome",
@@ -1482,8 +1512,11 @@
           formWebsite: "Il tuo sito o pagina (facoltativo)",
           formPhone: "Telefono (facoltativo)",
           formMessage: "Come possiamo aiutarti?",
-          formSubmit: "Prepara email",
-          formNote: "Si aprirà la tua app email con il messaggio indirizzato a VAMSA Studio. Questa pagina non invia né salva i tuoi dati."
+          formSubmit: "Invia richiesta",
+          formNote: "Il tuo messaggio sarà inviato in modo sicuro a VAMSA Studio.",
+          formSending: "Invio del messaggio in corso...",
+          formSuccess: "Grazie! Il tuo messaggio è stato inviato a VAMSA Studio.",
+          formError: "Non è stato possibile inviare il messaggio. Riprova."
         },
         fr: {
           formName: "Votre nom",
@@ -1491,8 +1524,11 @@
           formWebsite: "Votre site web ou page (facultatif)",
           formPhone: "Téléphone (facultatif)",
           formMessage: "Comment pouvons-nous vous aider ?",
-          formSubmit: "Préparer l'e-mail",
-          formNote: "Votre application de messagerie s'ouvrira avec un message adressé à VAMSA Studio. Cette page n'envoie ni ne stocke vos données."
+          formSubmit: "Envoyer la demande",
+          formNote: "Votre message sera envoyé en toute sécurité à VAMSA Studio.",
+          formSending: "Envoi de votre message...",
+          formSuccess: "Merci ! Votre message a été envoyé à VAMSA Studio.",
+          formError: "Impossible d'envoyer le message. Veuillez réessayer."
         },
         de: {
           formName: "Dein Name",
@@ -1500,8 +1536,11 @@
           formWebsite: "Deine Website oder Seite (optional)",
           formPhone: "Telefon (optional)",
           formMessage: "Wobei können wir dir helfen?",
-          formSubmit: "E-Mail vorbereiten",
-          formNote: "Deine E-Mail-App öffnet sich mit einer Nachricht an VAMSA Studio. Diese Seite sendet oder speichert keine Daten."
+          formSubmit: "Anfrage senden",
+          formNote: "Deine Nachricht wird sicher an VAMSA Studio gesendet.",
+          formSending: "Nachricht wird gesendet...",
+          formSuccess: "Danke! Deine Nachricht wurde an VAMSA Studio gesendet.",
+          formError: "Nachricht konnte nicht gesendet werden. Bitte versuche es erneut."
         },
         ru: {
           formName: "Ваше имя",
@@ -1509,8 +1548,11 @@
           formWebsite: "Ваш сайт или страница (необязательно)",
           formPhone: "Телефон (необязательно)",
           formMessage: "Чем мы можем вам помочь?",
-          formSubmit: "Подготовить письмо",
-          formNote: "Откроется ваша почтовая программа с письмом для VAMSA Studio. Эта страница не отправляет и не сохраняет ваши данные."
+          formSubmit: "Отправить запрос",
+          formNote: "Ваше сообщение будет безопасно отправлено в VAMSA Studio.",
+          formSending: "Отправка сообщения...",
+          formSuccess: "Спасибо! Ваше сообщение отправлено в VAMSA Studio.",
+          formError: "Не удалось отправить сообщение. Попробуйте ещё раз."
         },
         pt: {
           formName: "O seu nome",
@@ -1518,10 +1560,95 @@
           formWebsite: "O seu site ou página (opcional)",
           formPhone: "Telefone (opcional)",
           formMessage: "Como podemos ajudar?",
-          formSubmit: "Preparar email",
-          formNote: "A sua aplicação de email será aberta com uma mensagem para a VAMSA Studio. Esta página não envia nem guarda os seus dados."
+          formSubmit: "Enviar pedido",
+          formNote: "A sua mensagem será enviada em segurança para a VAMSA Studio.",
+          formSending: "A enviar a sua mensagem...",
+          formSuccess: "Obrigado! A sua mensagem foi enviada para a VAMSA Studio.",
+          formError: "Não foi possível enviar a mensagem. Tente novamente."
         }
       };
+      const analyticsTranslations = {
+        en: {
+          analyticsSettings: "Cookie settings",
+          analyticsConsentTitle: "Analytics preferences",
+          analyticsConsentText: "Allow analytics to help us understand visits to our site. Analytics loads only if you accept. You can change this choice anytime in Cookie settings.",
+          analyticsAccept: "Accept analytics",
+          analyticsReject: "Reject analytics"
+        },
+        sr: {
+          analyticsSettings: "Podešavanja kolačića",
+          analyticsConsentTitle: "Podešavanja analitike",
+          analyticsConsentText: "Dozvoli analitiku da bismo razumeli posećenost sajta. Analitika se učitava samo ako je prihvatiš. Izbor možeš promeniti u podešavanjima kolačića.",
+          analyticsAccept: "Prihvati analitiku",
+          analyticsReject: "Odbij analitiku"
+        },
+        es: {
+          analyticsSettings: "Configuración de cookies",
+          analyticsConsentTitle: "Preferencias de análisis",
+          analyticsConsentText: "Permite el análisis para ayudarnos a entender las visitas al sitio. Solo se carga si lo aceptas. Puedes cambiar esta opción en cualquier momento.",
+          analyticsAccept: "Aceptar análisis",
+          analyticsReject: "Rechazar análisis"
+        },
+        zh: {
+          analyticsSettings: "Cookie 设置",
+          analyticsConsentTitle: "分析偏好设置",
+          analyticsConsentText: "允许我们通过分析了解网站访问情况。只有在你同意后才会加载分析功能。你可以随时在 Cookie 设置中更改选择。",
+          analyticsAccept: "接受分析",
+          analyticsReject: "拒绝分析"
+        },
+        ja: {
+          analyticsSettings: "Cookie設定",
+          analyticsConsentTitle: "アクセス解析の設定",
+          analyticsConsentText: "サイトの訪問状況を把握するため、アクセス解析を許可してください。同意した場合のみ読み込まれます。Cookie設定からいつでも変更できます。",
+          analyticsAccept: "解析を許可",
+          analyticsReject: "解析を拒否"
+        },
+        hi: {
+          analyticsSettings: "कुकी सेटिंग",
+          analyticsConsentTitle: "विश्लेषिकी प्राथमिकताएँ",
+          analyticsConsentText: "साइट विज़िट समझने में हमारी मदद के लिए विश्लेषिकी की अनुमति दें। यह केवल आपकी सहमति पर लोड होगी। आप कुकी सेटिंग में इसे कभी भी बदल सकते हैं।",
+          analyticsAccept: "विश्लेषिकी स्वीकारें",
+          analyticsReject: "विश्लेषिकी अस्वीकारें"
+        },
+        it: {
+          analyticsSettings: "Impostazioni cookie",
+          analyticsConsentTitle: "Preferenze di analisi",
+          analyticsConsentText: "Consenti le analisi per aiutarci a capire le visite al sito. Verranno caricate solo se accetti. Puoi cambiare scelta in qualsiasi momento.",
+          analyticsAccept: "Accetta analisi",
+          analyticsReject: "Rifiuta analisi"
+        },
+        fr: {
+          analyticsSettings: "Paramètres des cookies",
+          analyticsConsentTitle: "Préférences d'analyse",
+          analyticsConsentText: "Autorisez les statistiques pour nous aider à comprendre les visites du site. Elles ne sont chargées que si vous acceptez. Vous pouvez modifier ce choix à tout moment.",
+          analyticsAccept: "Accepter les statistiques",
+          analyticsReject: "Refuser les statistiques"
+        },
+        de: {
+          analyticsSettings: "Cookie-Einstellungen",
+          analyticsConsentTitle: "Analyse-Einstellungen",
+          analyticsConsentText: "Erlaube Analysen, damit wir die Besuche auf unserer Website verstehen. Analysen werden nur nach deiner Zustimmung geladen. Du kannst diese Auswahl jederzeit ändern.",
+          analyticsAccept: "Analysen akzeptieren",
+          analyticsReject: "Analysen ablehnen"
+        },
+        ru: {
+          analyticsSettings: "Настройки файлов cookie",
+          analyticsConsentTitle: "Настройки аналитики",
+          analyticsConsentText: "Разрешите аналитику, чтобы помочь нам понять посещаемость сайта. Она загружается только с вашего согласия. Вы можете изменить выбор в любое время.",
+          analyticsAccept: "Разрешить аналитику",
+          analyticsReject: "Отклонить аналитику"
+        },
+        pt: {
+          analyticsSettings: "Definições de cookies",
+          analyticsConsentTitle: "Preferências de análise",
+          analyticsConsentText: "Permita a análise para nos ajudar a compreender as visitas ao site. Só será carregada se aceitar. Pode alterar esta escolha a qualquer momento.",
+          analyticsAccept: "Aceitar análise",
+          analyticsReject: "Rejeitar análise"
+        }
+      };
+      Object.entries(analyticsTranslations).forEach(([language, dictionary]) => {
+        Object.assign(translations[language], dictionary);
+      });
       Object.entries(formTranslations).forEach(([language, dictionary]) => {
         Object.assign(translations[language], dictionary);
       });
@@ -1581,23 +1708,108 @@
 
       const savedLanguage = localStorage.getItem("vamsa-language");
       const savedTheme = localStorage.getItem("vamsa-theme");
-      document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      const contactForm = document.querySelector("#contact-form");
+      const contactFormNote = contactForm.querySelector(".contact-form-note");
+      const contactFormButton = contactForm.querySelector('button[type="submit"]');
+      let contactFormStatus = "formNote";
+
+      const updateContactFormStatus = (status) => {
+        contactFormStatus = status;
+        contactFormNote.dataset.i18n = status;
+        contactFormNote.textContent = translations[document.documentElement.lang][status];
+      };
+
+      contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const fields = [
-          ["Name", formData.get("name")],
-          ["Email", formData.get("email")],
-          ["Website or page", formData.get("website") || "Not provided"],
-          ["Phone", formData.get("phone") || "Not provided"],
-          ["Project details", formData.get("message")]
-        ];
-        const body = fields.map(([label, value]) => `${label}: ${value}`).join("\n\n");
-        const subject = encodeURIComponent(`VAMSA Studio inquiry from ${formData.get("name")}`);
-        window.location.href = `mailto:vamsastudioteam@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+        if (!contactForm.reportValidity()) return;
+
+        contactFormButton.disabled = true;
+        updateContactFormStatus("formSending");
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" }
+          });
+          if (!response.ok) {
+            throw new Error(`Formspree submission failed with status ${response.status}`);
+          }
+
+          contactForm.reset();
+          updateContactFormStatus("formSuccess");
+        } catch (error) {
+          console.error("Unable to submit the contact form.", error);
+          updateContactFormStatus("formError");
+        } finally {
+          contactFormButton.disabled = false;
+        }
       });
       document.documentElement.dataset.theme = savedTheme === "light" ? "light" : "dark";
       document.querySelector('meta[name="theme-color"]').content = document.documentElement.dataset.theme === "dark" ? "#0a0907" : "#f5eee1";
       setLanguage(savedLanguage);
+
+      const analyticsConsentBanner = document.querySelector("#analytics-consent");
+      const analyticsSettingsButton = document.querySelector("#analytics-settings");
+      const analyticsConsentKey = "vamsa-analytics-consent";
+      const googleTagManagerId = "GTM-KRLPHJH8";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+      window.gtag("js", new Date());
+
+      const loadGoogleTagManager = () => {
+        if (window.googleTagManagerLoaded) return;
+
+        window.googleTagManagerLoaded = true;
+        const tagManagerScript = document.createElement("script");
+        tagManagerScript.async = true;
+        tagManagerScript.src = `https://www.googletagmanager.com/gtm.js?id=${googleTagManagerId}`;
+        tagManagerScript.onerror = () => {
+          window.googleTagManagerLoaded = false;
+          console.error("Google Tag Manager could not be loaded.");
+        };
+        document.head.append(tagManagerScript);
+      };
+
+      const setAnalyticsConsent = (consent) => {
+        localStorage.setItem(analyticsConsentKey, consent);
+        window.gtag("consent", "update", {
+          analytics_storage: consent === "granted" ? "granted" : "denied"
+        });
+        analyticsConsentBanner.hidden = true;
+
+        if (consent === "granted") {
+          loadGoogleTagManager();
+        }
+      };
+
+      const savedAnalyticsConsent = localStorage.getItem(analyticsConsentKey);
+      if (savedAnalyticsConsent === "granted") {
+        setAnalyticsConsent("granted");
+      } else if (savedAnalyticsConsent === "denied") {
+        setAnalyticsConsent("denied");
+      } else {
+        analyticsConsentBanner.hidden = false;
+      }
+
+      document.querySelector("#analytics-accept").addEventListener("click", () => {
+        setAnalyticsConsent("granted");
+      });
+      document.querySelector("#analytics-reject").addEventListener("click", () => {
+        setAnalyticsConsent("denied");
+      });
+      analyticsSettingsButton.addEventListener("click", () => {
+        analyticsConsentBanner.hidden = false;
+        document.querySelector("#analytics-accept").focus();
+      });
 
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const heroSlides = [
@@ -1608,19 +1820,40 @@
       ];
       const heroImage = document.querySelector(".hero-image img");
       const heroImageIndex = document.querySelector(".image-index");
+      const nextHeroImage = new Image();
+      nextHeroImage.className = "hero-image-next";
+      nextHeroImage.alt = "";
+      nextHeroImage.setAttribute("aria-hidden", "true");
+      heroImage.parentElement.append(nextHeroImage);
       let activeHeroSlide = 0;
 
       if (!reducedMotion) {
-        window.setInterval(() => {
-          heroImage.classList.add("is-transitioning");
-          window.setTimeout(() => {
-            activeHeroSlide = (activeHeroSlide + 1) % heroSlides.length;
-            heroImage.src = heroSlides[activeHeroSlide].src;
-            heroImage.alt = heroSlides[activeHeroSlide].alt;
-            heroImageIndex.textContent = `0${activeHeroSlide + 1} / 0${heroSlides.length}`;
-            heroImage.classList.remove("is-transitioning");
-          }, 400);
-        }, 5000);
+        const preloadHeroSlide = ({ src }) => new Promise((resolve, reject) => {
+          const image = new Image();
+          image.onload = () => resolve(image);
+          image.onerror = () => reject(new Error(`Unable to preload hero slide: ${src}`));
+          image.src = src;
+        });
+
+        Promise.all(heroSlides.map(preloadHeroSlide))
+          .then(() => {
+            window.setInterval(() => {
+              activeHeroSlide = (activeHeroSlide + 1) % heroSlides.length;
+              const nextSlide = heroSlides[activeHeroSlide];
+              nextHeroImage.src = nextSlide.src;
+              nextHeroImage.classList.add("is-visible");
+              heroImage.classList.add("is-transitioning");
+
+              window.setTimeout(() => {
+                heroImage.src = nextSlide.src;
+                heroImage.alt = nextSlide.alt;
+                heroImageIndex.textContent = `0${activeHeroSlide + 1} / 0${heroSlides.length}`;
+                heroImage.classList.remove("is-transitioning");
+                nextHeroImage.classList.remove("is-visible");
+              }, 700);
+            }, 5000);
+          })
+          .catch((error) => console.error("The hero slideshow could not be started.", error));
       }
 
       if (!reducedMotion && "IntersectionObserver" in window) {
